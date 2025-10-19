@@ -1,0 +1,296 @@
+category,skill
+Software Development,python
+Software Development,javascript
+Software Development,typescript
+Software Development,java
+Software Development,c#
+Software Development,.net
+Software Development,c++
+Software Development,go
+Software Development,php
+Software Development,ruby
+Software Development,swift
+Software Development,kotlin
+Software Development,rust
+Software Development,scala
+Software Development,dart
+Software Development,html5
+Software Development,css3
+Software Development,sass
+Software Development,less
+Software Development,react
+Software Development,react native
+Software Development,next.js
+Software Development,node.js
+Software Development,express
+Software Development,angular
+Software Development,vue.js
+Software Development,redux
+Software Development,tailwind css
+Software Development,bootstrap
+Software Development,jquery
+Software Development,web components
+Software Development,rest
+Software Development,graphql
+Software Development,grpc
+Software Development,websockets
+Software Development,oauth
+Software Development,openid connect
+Software Development,soap
+Software Development,design patterns
+Software Development,clean architecture
+Software Development,oop
+Software Development,functional programming
+Software Development,tdd
+Software Development,bdd
+Software Development,unit testing
+Software Development,integration testing
+Software Development,e2e testing
+Software Development,playwright
+Software Development,cypress
+Software Development,selenium
+Software Development,storybook
+Software Development,webrtc
+Software Development,eletron
+Data & AI,sql
+Data & AI,postgresql
+Data & AI,mysql
+Data & AI,sql server
+Data & AI,sqlite
+Data & AI,oracle db
+Data & AI,mongodb
+Data & AI,redis
+Data & AI,elasticsearch
+Data & AI,neo4j
+Data & AI,data modeling
+Data & AI,data warehousing
+Data & AI,star schema
+Data & AI,snowflake
+Data & AI,bigquery
+Data & AI,redshift
+Data & AI,etl
+Data & AI,airflow
+Data & AI,dbt
+Data & AI,pandas
+Data & AI,numpy
+Data & AI,matplotlib
+Data & AI,seaborn
+Data & AI,plotly
+Data & AI,tableau
+Data & AI,power bi
+Data & AI,excel advanced
+Data & AI,statistics
+Data & AI,ab testing
+Data & AI,experiment design
+Data & AI,machine learning
+Data & AI,deep learning
+Data & AI,nlp
+Data & AI,computer vision
+Data & AI,time series
+Data & AI,feature engineering
+Data & AI,model deployment
+Data & AI,mlops
+Data & AI,scikit-learn
+Data & AI,tensorflow
+Data & AI,pytorch
+Data & AI,hugging face
+Data & AI,xgboost
+Data & AI,lightgbm
+Cloud & DevOps,linux
+Cloud & DevOps,bash
+Cloud & DevOps,powershell
+Cloud & DevOps,git
+Cloud & DevOps,github
+Cloud & DevOps,gitlab
+Cloud & DevOps,bitbucket
+Cloud & DevOps,ci/cd
+Cloud & DevOps,github actions
+Cloud & DevOps,gitlab ci
+Cloud & DevOps,jenkins
+Cloud & DevOps,circleci
+Cloud & DevOps,teamcity
+Cloud & DevOps,docker
+Cloud & DevOps,kubernetes
+Cloud & DevOps,helm
+Cloud & DevOps,terraform
+Cloud & DevOps,ansible
+Cloud & DevOps,aws
+Cloud & DevOps,azure
+Cloud & DevOps,gcp
+Cloud & DevOps,cloudformation
+Cloud & DevOps,nginx
+Cloud & DevOps,apache httpd
+Cloud & DevOps,load balancing
+Cloud & DevOps,prometheus
+Cloud & DevOps,grafana
+Cloud & DevOps,elk stack
+Cloud & DevOps,opentelemetry
+Cloud & DevOps,sre
+Cybersecurity,siem
+Cybersecurity,ids/ips
+Cybersecurity,vulnerability scanning
+Cybersecurity,penetration testing
+Cybersecurity,threat modeling
+Cybersecurity,network security
+Cybersecurity,endpoint security
+Cybersecurity,incident response
+Cybersecurity,iam
+Cybersecurity,zero trust
+Cybersecurity,owasp top 10
+Product & Design,product management
+Product & Design,product discovery
+Product & Design,roadmapping
+Product & Design,okr
+Product & Design,user research
+Product & Design,ux design
+Product & Design,ui design
+Product & Design,prototyping
+Product & Design,wireframing
+Product & Design,figma
+Product & Design,adobe xd
+Product & Design,sketch
+Product & Design,design systems
+Product & Design,accessibility
+Product & Design,usability testing
+Marketing & Growth,seo
+Marketing & Growth,sem
+Marketing & Growth,content marketing
+Marketing & Growth,email marketing
+Marketing & Growth,marketing automation
+Marketing & Growth,google ads
+Marketing & Growth,facebook ads
+Marketing & Growth,linkedin ads
+Marketing & Growth,google analytics
+Marketing & Growth,tag manager
+Marketing & Growth,hubspot
+Marketing & Growth,marketo
+Marketing & Growth,crm
+Sales & CS,b2b sales
+Sales & CS,b2c sales
+Sales & CS,account management
+Sales & CS,key account management
+Sales & CS,negotiation
+Sales & CS,pipeline management
+Sales & CS,forecasting (sales)
+Sales & CS,customer success
+Sales & CS,onboarding (customers)
+Sales & CS,customer support
+Sales & CS,zendesk
+Sales & CS,intercom
+Finance & Accounting,financial analysis
+Finance & Accounting,financial modeling
+Finance & Accounting,budgeting
+Finance & Accounting,forecasting
+Finance & Accounting,valuation
+Finance & Accounting,accounting
+Finance & Accounting,bookkeeping
+Finance & Accounting,ap (accounts payable)
+Finance & Accounting,ar (accounts receivable)
+Finance & Accounting,tax preparation
+Finance & Accounting,audit
+Finance & Accounting,ifrs
+Finance & Accounting,gaap
+Finance & Accounting,quickbooks
+Finance & Accounting,sap fico
+Finance & Accounting,oracle erp
+HR & People,hr fundamentals
+HR & People,recruiting
+HR & People,talent acquisition
+HR & People,interviewing
+HR & People,onboarding (hr)
+HR & People,payroll
+HR & People,performance management
+HR & People,compensation & benefits
+HR & People,employee relations
+HR & People,learning & development
+HR & People,hris
+Operations & Supply Chain,operations management
+Operations & Supply Chain,process improvement
+Operations & Supply Chain,lean
+Operations & Supply Chain,six sigma
+Operations & Supply Chain,kaizen
+Operations & Supply Chain,project management
+Operations & Supply Chain,risk management
+Operations & Supply Chain,stakeholder management
+Operations & Supply Chain,procurement
+Operations & Supply Chain,inventory management
+Operations & Supply Chain,logistics
+Operations & Supply Chain,warehouse management
+Operations & Supply Chain,quality assurance
+Operations & Supply Chain,quality control
+Operations & Supply Chain,ms project
+Operations & Supply Chain,jira (pm)
+Manufacturing & Engineering,autocad
+Manufacturing & Engineering,solidworks
+Manufacturing & Engineering,catia
+Manufacturing & Engineering,ansys
+Manufacturing & Engineering,cad/cam
+Manufacturing & Engineering,blueprint reading
+Manufacturing & Engineering,cnc machining
+Manufacturing & Engineering,3d printing
+Manufacturing & Engineering,mechatronics
+Manufacturing & Engineering,pdm/plm
+Manufacturing & Engineering,quality inspection
+Manufacturing & Engineering,preventive maintenance
+Manufacturing & Engineering,industrial safety
+Manufacturing & Engineering,osha compliance
+Manufacturing & Engineering,project estimation
+Healthcare,patient care
+Healthcare,clinical documentation
+Healthcare,ehr
+Healthcare,emr
+Healthcare,hipaa compliance
+Healthcare,medical coding
+Healthcare,icd-10
+Healthcare,cpt
+Healthcare,cpoe
+Healthcare,nursing
+Healthcare,phlebotomy
+Healthcare,medication administration
+Healthcare,basic life support
+Healthcare,acls
+Education,curriculum development
+Education,lesson planning
+Education,classroom management
+Education,assessment design
+Education,e-learning
+Education,instructional design
+Legal,contract drafting
+Legal,legal research
+Legal,compliance
+Legal,intellectual property
+Legal,due diligence
+Legal,litigation support
+Hospitality & Retail,front desk operations
+Hospitality & Retail,reservations
+Hospitality & Retail,housekeeping management
+Hospitality & Retail,food safety
+Hospitality & Retail,haccp
+Hospitality & Retail,barista
+Hospitality & Retail,cash handling
+Hospitality & Retail,pos systems
+Hospitality & Retail,visual merchandising
+Hospitality & Retail,store operations
+Soft Skills,communication
+Soft Skills,presentation
+Soft Skills,storytelling
+Soft Skills,teamwork
+Soft Skills,leadership
+Soft Skills,problem solving
+Soft Skills,critical thinking
+Soft Skills,time management
+Soft Skills,adaptability
+Soft Skills,creativity
+Soft Skills,attention to detail
+Soft Skills,conflict resolution
+Languages,english
+Languages,arabic
+Languages,french
+Languages,spanish
+Languages,german
+Languages,italian
+Languages,turkish
+Languages,chinese
+Languages,japanese
+Languages,portuguese
+Languages,russian

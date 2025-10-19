@@ -1,0 +1,121 @@
+{
+  "default_verbs": [
+    "Developed","Implemented","Built","Created","Designed","Engineered",
+    "Optimized","Integrated","Refactored","Automated","Deployed","Maintained",
+    "Improved","Documented","Tested","Validated","Monitored","Scaled","Secured"
+  ],
+  "domains": {
+    "frontend": {
+      "keywords": ["react","next","vue","angular","typescript","javascript","css","mui","tailwind","redux","vite","webpack","storybook"],
+      "verbs": ["Implemented","Built","Refactored","Optimized","Styled","Debugged","Integrated","Tested","Deployed","Localized","Responsive-optimized","Instrumented","A11y-improved","Virtualized","Lazy-loaded"]
+    },
+    "backend": {
+      "keywords": ["node","express","fastapi","django","spring","flask",".net","rest","graphql","api","auth","jwt","microservices"],
+      "verbs": ["Designed","Developed","Implemented","Optimized","Integrated","Refactored","Hardened","Scalability-improved","Instrumented","Cached","Parallelized","Load-balanced","Profiled","Rate-limited","Versioned"]
+    },
+    "mobile": {
+      "keywords": ["flutter","dart","react native","kotlin","swift","android","ios","xcode","play store"],
+      "verbs": ["Built","Implemented","Optimized","Refactored","Released","Integrated","Debugged","Tested","Deployed","Localized","Offline-enabled","Performance-tuned","Code-signed","Published","Crash-reduced"]
+    },
+    "data": {
+      "keywords": ["pandas","sql","numpy","etl","airflow","dbt","bi","tableau","power bi","spark","parquet","warehouse","lakehouse"],
+      "verbs": ["Analyzed","Engineered","Cleaned","Modeled","Aggregated","Visualized","Automated","Optimized","Validated","Profiled","Cataloged","Scheduled","Lineage-tracked","Quality-checked","Documented"]
+    },
+    "ml": {
+      "keywords": ["pytorch","tensorflow","keras","scikit","sklearn","llm","nlp","cv","xgboost","lightgbm","huggingface","transformers"],
+      "verbs": ["Trained","Fine-tuned","Evaluated","Deployed","Experimented","Optimized","Benchmarked","Served","Monitored","Augmented","Regularized","Hyperparameter-tuned","Quantized","Pruned","Cross-validated"]
+    },
+    "mlops": {
+      "keywords": ["mlflow","dagster","kserve","sagemaker","vertex ai","model registry","feature store","kubeflow"],
+      "verbs": ["Tracked","Versioned","Registered","Orchestrated","Served","Canary-deployed","A/B tested","Monitored","Alerted","Rolled back","Audited","Reproducibility-ensured","Pipelined","Containerized","Scheduled"]
+    },
+    "devops": {
+      "keywords": ["docker","kubernetes","k8s","ci/cd","jenkins","github actions","gitlab ci","terraform","ansible","helm","prometheus","grafana"],
+      "verbs": ["Containerized","Orchestrated","Automated","Provisioned","Configured","Deployed","Monitored","Scaled","Instrumented","Templatized","Secrets-managed","Blue-green deployed","Canary-released","Self-healed","Hardened"]
+    },
+    "cloud": {
+      "keywords": ["aws","gcp","azure","cloudfront","s3","ec2","lambda","cloud run","iam","vpc","rds","cloud sql"],
+      "verbs": ["Architected","Provisioned","Configured","Deployed","Optimized","Secured","Automated","Monitored","Scaled","Cost-optimized","Right-sized","Backed up","Patched","Failover-enabled","Encrypted"]
+    },
+    "security": {
+      "keywords": ["owasp","iam","csp","jwt","sast","dast","siem","waf","tls","csp","secrets","cve"],
+      "verbs": ["Hardened","Audited","Monitored","Mitigated","Implemented","Assessed","Remediated","Encrypted","Validated","Threat-modeled","Patched","Tokenized","Complied","Isolated","Sandboxed"]
+    },
+    "testing": {
+      "keywords": ["jest","pytest","cypress","playwright","unittest","integration tests","e2e","mock","coverage","tdd","bdd"],
+      "verbs": ["Tested","Automated","Validated","Verified","Instrumented","Reported","Refactored","Stabilized","Optimized","Mocked","Stubbed","Isolated","Load-tested","Regression-tested","Smoke-tested"]
+    },
+    "qa": {
+      "keywords": ["manual test","bug report","test case","test plan","qa process","defect"],
+      "verbs": ["Planned","Authored","Executed","Logged","Triaged","Reproduced","Prioritized","Verified","Regressed","Tracked","Closed","Improved","Standardized","Documented","Aligned"]
+    },
+    "db": {
+      "keywords": ["postgresql","mysql","sqlite","mongodb","redis","index","query plan","replication","sharding","partitioning"],
+      "verbs": ["Modeled","Indexed","Normalized","Partitioned","Replicated","Sharded","Queried","Optimized","Backed up","Restored","Migrated","Tuned","Archived","Encrypted","Monitored"]
+    },
+    "analytics": {
+      "keywords": ["ga4","google analytics","segment","amplitude","mixpanel","event","funnel","cohort","dashboard","kpi","metric"],
+      "verbs": ["Instrumented","Tracked","Attributed","Segmented","Analyzed","Reported","Dashboarded","Alerted","Cohorted","Experimented","A/B tested","Correlated","Forecasted","Prioritized","Communicated"]
+    },
+    "uiux": {
+      "keywords": ["figma","wireframe","prototype","usability","a/b","design system","heuristic","accessibility"],
+      "verbs": ["Designed","Prototyped","Iterated","Tested","Refined","Implemented","Improved","Documented","Validated","Storyboarded","Flow-mapped","Spec-ed","Pixel-perfected","A11y-improved","Guideline-aligned"]
+    },
+    "product": {
+      "keywords": ["roadmap","stakeholder","backlog","kpi","okr","market","requirements","spec","grooming"],
+      "verbs": ["Defined","Prioritized","Coordinated","Launched","Measured","Improved","Aligned","Synthesized","Communicated","Scoped","De-risked","Scheduled","Delivered","Iterated","Evangelized"]
+    },
+    "marketing": {
+      "keywords": ["campaign","ad","facebook ads","tiktok ads","creative","utm","landing page"],
+      "verbs": ["Launched","Optimized","Targeted","Segmented","Retargeted","Iterated","Budgeted","Scaled","Reported","Attributed","Converted","Capped","Experimented","Personalized","Localized"]
+    },
+    "seo": {
+      "keywords": ["seo","keywords","backlink","on-page","off-page","semrush","ahrefs","search console"],
+      "verbs": ["Optimized","Audited","Restructured","Interlinked","Indexed","Ranked","Tracked","Localized","Schema-marked","Crawled","Consolidated","De-duplicated","Redirected","Submitted","Monitored"]
+    },
+    "content": {
+      "keywords": ["content","blog","copy","landing","newsletter","script","social"],
+      "verbs": ["Authored","Edited","Curated","Repurposed","Localized","Scheduled","Published","A/B tested","SEO-optimized","Illustrated","Storylined","Reviewed","Standardized","Aligned","Amplified"]
+    },
+    "embedded": {
+      "keywords": ["arduino","stm32","esp32","microcontroller","uart","spi","i2c","sensor","rtos"],
+      "verbs": ["Prototyped","Programmed","Interfaced","Calibrated","Integrated","Debugged","Soldered","Optimized","Tested","Flashed","Sampled","Filtered","Debounced","Profiled","Hardened"]
+    },
+    "iot": {
+      "keywords": ["mqtt","coap","ble","lorawan","gateway","edge","telemetry"],
+      "verbs": ["Provisioned","Bridged","Streamed","Buffered","Compressed","Encrypted","Synchronized","Edge-processed","Backhauled","Alerted","Over-the-air updated","Paired","Commissioned","Monitored","Digital-twinned"]
+    },
+    "robotics": {
+      "keywords": ["ros","slam","pid","actuator","servo","lidar","imu","opencv"],
+      "verbs": ["Controlled","Calibrated","Navigated","Localized","Mapped","Stabilized","Sensed","Actuated","Synchronized","Simulated","Path-planned","Fused","Tracked","Tuned","Commissioned"]
+    },
+    "networking": {
+      "keywords": ["vlan","vpn","tcp","udp","bgp","ospf","firewall","switch","router","dns","dhcp"],
+      "verbs": ["Configured","Optimized","Diagnosed","Monitored","Secured","Implemented","Troubleshot","Documented","Automated","Patched","Segmented","Provisioned","QoS-tuned","Peered","Hardened"]
+    },
+    "research": {
+      "keywords": ["paper","publication","benchmark","dataset","hypothesis","literature","arxiv"],
+      "verbs": ["Investigated","Prototyped","Experimented","Evaluated","Authored","Presented","Benchmarked","Analyzed","Replicated","Reproduced","Surveyed","Synthesized","Cited","Reviewed","Published"]
+    },
+    "arvr": {
+      "keywords": ["unity","unreal","ar","vr","xr","openxr","oculus","quest"],
+      "verbs": ["Prototyped","Rendered","Optimized","Integrated","Animated","Interacted","Tracked","Calibrated","Deployed","Tested","Profiled","Baked","Shaded","Rigged","Polished"]
+    },
+    "gamedev": {
+      "keywords": ["unity","unreal","godot","shader","physics","ai agent","navmesh"],
+      "verbs": ["Programmed","Scripted","Balanced","Optimized","Animated","Integrated","Playtested","Instrumented","Polished","Debugged","Profiled","Refactored","Authored","Deployed","Scaled"]
+    },
+    "web3": {
+      "keywords": ["solidity","hardhat","ethers","web3","wallet","nft","defi","smart contract"],
+      "verbs": ["Authored","Audited","Deployed","Upgraded","Bridged","Indexed","Verified","Whitelisted","Minted","Staked","Claimed","Simulated","Fork-tested","Gas-optimized","Secured"]
+    },
+    "docs": {
+      "keywords": ["documentation","readme","api ref","guide","tutorial","spec","rfc"],
+      "verbs": ["Documented","Explained","Standardized","Versioned","Illustrated","Reviewed","Clarified","Streamlined","Annotated","Exampled","Indexed","Templatized","Linted","Published","Maintained"]
+    },
+    "education": {
+      "keywords": ["teach","mentor","tutor","workshop","lecture","course","curriculum"],
+      "verbs": ["Mentored","Coached","Taught","Explained","Prepared","Delivered","Assessed","Reviewed","Designed","Curated","Facilitated","Organized","Demonstrated","Guided","Supported"]
+    }
+  }
+}
