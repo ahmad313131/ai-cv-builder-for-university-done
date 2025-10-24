@@ -19,23 +19,24 @@ def generate_cv(payload: CVIn):
     p = canvas.Canvas(buffer, pagesize=A4)
     W, H = A4
 
-    # ---------- THEME / SCALES ----------
+        # ---------- THEME / SCALES ----------
     dark = colors.HexColor("#202833")
     light_text = colors.HexColor("#C9D3DF")
     line_color = colors.HexColor("#D7DEE7")
     body_text = colors.HexColor("#2B2B2B")
 
-    # Typography & rhythm
-    TITLE_SZ = 14
-    SUB_SZ = 11
-    BODY_SZ = 11
-    SMALL_SZ = 10
+    # ⬆️ كبّرنا الخطوط 1–2 pt مع رفع بسيط للـline-height
+    TITLE_SZ = 16      # كان 14
+    SUB_SZ   = 12      # كان 11
+    BODY_SZ  = 12      # كان 11
+    SMALL_SZ = 11      # كان 10
 
-    LINE = 15             # line-height main column
-    LINE_SIDE = 13        # line-height sidebar
-    BULLET_INDENT = 10    # px indent from left edge of right column
-    SECTION_GAP = 14      # gap after sections in right column
-    SIDE_SECTION_GAP = 10 # gap after sections in sidebar
+    LINE          = 17  # كان 15   (يمين)
+    LINE_SIDE     = 14  # كان 13   (شريط جانبي)
+    BULLET_INDENT = 12  # كان 10
+    SECTION_GAP   = 16  # كان 14
+    SIDE_SECTION_GAP = 12  # كان 10
+
 
     # ---------- HELPERS ----------
     def text_width(text, font="Helvetica", size=BODY_SZ):
@@ -92,10 +93,11 @@ def generate_cv(payload: CVIn):
         return y
 
     # ---------- LAYOUT ----------
-    margin = 36
-    left_w = 190
+    margin = 40          # كان 36
+    left_w = 190         # فيك تتركها نفسها أو تنقصها لـ 180 ليوسّع العمود اليمين
     right_x = margin + left_w + 24
     right_w = W - right_x - margin
+
 
     def draw_sidebar_bg():
         p.setFillColor(dark)
@@ -284,8 +286,11 @@ def generate_cv(payload: CVIn):
     else:
         raw_exp = payload.experience or ""
         bullets = [b.strip("•- ").strip() for b in (raw_exp.replace("•","\n").replace("- ","\n").splitlines()) if b.strip()]
-    y = draw_bullets(bullets[:12], right_w, y, bullet="•", size=BODY_SZ, indent=BULLET_INDENT, line=LINE, after_gap=4)
-    y -= SECTION_GAP
+
+    PDF_MAX_BULLETS = int(os.getenv("PDF_MAX_BULLETS", "18"))
+    y = draw_bullets(bullets[:PDF_MAX_BULLETS], right_w, y,
+                    bullet="•", size=BODY_SZ, indent=BULLET_INDENT,
+                    line=LINE, after_gap=4)
 
     # EDUCATION
     right_section("Education")

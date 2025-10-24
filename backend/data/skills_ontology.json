@@ -1,230 +1,4103 @@
 {
+  "generated_at": "2025-10-19T13:25:16.007139Z",
   "skills": [
-    {"canonical":"React","aliases":["reactjs","react.js"],"category":"frontend"},
-    {"canonical":"Next.js","aliases":["nextjs"],"category":"frontend"},
-    {"canonical":"Vue.js","aliases":["vue","vuejs"],"category":"frontend"},
-    {"canonical":"Nuxt.js","aliases":["nuxt"],"category":"frontend"},
-    {"canonical":"Angular","aliases":["angularjs"],"category":"frontend"},
-    {"canonical":"Svelte","aliases":[],"category":"frontend"},
-    {"canonical":"TypeScript","aliases":["ts"],"category":"language"},
-    {"canonical":"JavaScript","aliases":["js"],"category":"language"},
-    {"canonical":"HTML","aliases":[],"category":"frontend"},
-    {"canonical":"CSS","aliases":[],"category":"frontend"},
-    {"canonical":"Tailwind CSS","aliases":["tailwind"],"category":"frontend"},
-    {"canonical":"Redux","aliases":[],"category":"frontend"},
-    {"canonical":"Webpack","aliases":[],"category":"frontend"},
-    {"canonical":"Vite","aliases":[],"category":"frontend"},
-
-    {"canonical":"Node.js","aliases":["node","nodejs","node js"],"category":"backend"},
-    {"canonical":"Express","aliases":["expressjs","express.js"],"category":"backend"},
-    {"canonical":"NestJS","aliases":["nest js"],"category":"backend"},
-    {"canonical":"Django","aliases":["django framework"],"category":"backend"},
-    {"canonical":"Flask","aliases":["flask framework"],"category":"backend"},
-    {"canonical":"FastAPI","aliases":["fast api"],"category":"backend"},
-    {"canonical":"Spring Boot","aliases":["spring","java spring","springboot","java + spring"],"category":"backend"},
-    {"canonical":".NET","aliases":["dotnet",".net core","asp.net","asp.net core"],"category":"backend"},
-    {"canonical":"Laravel","aliases":["php laravel"],"category":"backend"},
-    {"canonical":"Ruby on Rails","aliases":["rails"],"category":"backend"},
-    {"canonical":"Go","aliases":["golang"],"category":"backend"},
-    {"canonical":"PHP","aliases":[],"category":"language"},
-    {"canonical":"Python","aliases":["py"],"category":"language"},
-    {"canonical":"Java","aliases":[],"category":"language"},
-    {"canonical":"C#","aliases":["c sharp"],"category":"language"},
-    {"canonical":"C++","aliases":["cpp"],"category":"language"},
-    {"canonical":"Rust","aliases":[],"category":"language"},
-
-    {"canonical":"REST","aliases":["rest api","restful apis"],"category":"apis"},
-    {"canonical":"GraphQL","aliases":["graphql api"],"category":"apis"},
-    {"canonical":"gRPC","aliases":[],"category":"apis"},
-    {"canonical":"WebSockets","aliases":["websocket"],"category":"apis"},
-
-    {"canonical":"PostgreSQL","aliases":["postgres","psql"],"category":"database"},
-    {"canonical":"MySQL","aliases":[],"category":"database"},
-    {"canonical":"SQLite","aliases":[],"category":"database"},
-    {"canonical":"Microsoft SQL Server","aliases":["mssql","sql server"],"category":"database"},
-    {"canonical":"MongoDB","aliases":["mongodb atlas"],"category":"database"},
-    {"canonical":"Redis","aliases":[],"category":"database"},
-    {"canonical":"Elasticsearch","aliases":["elastic","es"],"category":"search"},
-    {"canonical":"Cassandra","aliases":[],"category":"database"},
-    {"canonical":"DynamoDB","aliases":[],"category":"database"},
-    {"canonical":"Neo4j","aliases":[],"category":"database"},
-
-    {"canonical":"AWS","aliases":["amazon web services"],"category":"cloud"},
-    {"canonical":"Azure","aliases":["microsoft azure"],"category":"cloud"},
-    {"canonical":"GCP","aliases":["google cloud"],"category":"cloud"},
-    {"canonical":"Docker","aliases":["containers"],"category":"devops"},
-    {"canonical":"Kubernetes","aliases":["k8s"],"category":"devops"},
-    {"canonical":"CI/CD","aliases":["ci cd","continuous integration","continuous delivery","pipelines"],"category":"devops"},
-    {"canonical":"Terraform","aliases":[],"category":"devops"},
-    {"canonical":"Ansible","aliases":[],"category":"devops"},
-    {"canonical":"GitHub Actions","aliases":["gha"],"category":"devops"},
-    {"canonical":"Jenkins","aliases":[],"category":"devops"},
-    {"canonical":"Linux","aliases":[],"category":"devops"},
-    {"canonical":"Nginx","aliases":["nginx server"],"category":"devops"},
-    {"canonical":"Apache","aliases":["apache httpd"],"category":"devops"},
-
-    {"canonical":"SQL","aliases":[],"category":"data"},
-    {"canonical":"Pandas","aliases":[],"category":"data"},
-    {"canonical":"NumPy","aliases":["numpy"],"category":"data"},
-    {"canonical":"scikit-learn","aliases":["sklearn"],"category":"ml"},
-    {"canonical":"TensorFlow","aliases":["tf"],"category":"ml"},
-    {"canonical":"PyTorch","aliases":[],"category":"ml"},
-    {"canonical":"XGBoost","aliases":[],"category":"ml"},
-    {"canonical":"LightGBM","aliases":["lgbm"],"category":"ml"},
-    {"canonical":"Airflow","aliases":[],"category":"data"},
-    {"canonical":"dbt","aliases":["data build tool"],"category":"data"},
-    {"canonical":"Apache Spark","aliases":["spark","pyspark"],"category":"data"},
-    {"canonical":"Kafka","aliases":["apache kafka"],"category":"data"},
-    {"canonical":"Power BI","aliases":["powerbi"],"category":"bi"},
-    {"canonical":"Tableau","aliases":[],"category":"bi"},
-    {"canonical":"Looker","aliases":["looker studio","google data studio"],"category":"bi"},
-
-    {"canonical":"NLP","aliases":["natural language processing"],"category":"ml"},
-    {"canonical":"Computer Vision","aliases":["cv"],"category":"ml"},
-    {"canonical":"LLMs","aliases":["large language models","foundation models"],"category":"mlops"},
-    {"canonical":"LangChain","aliases":[],"category":"mlops"},
-    {"canonical":"Vector Databases","aliases":["milvus","pinecone","faiss","qdrant","weaviate"],"category":"mlops"},
-    {"canonical":"MLOps","aliases":[],"category":"mlops"},
-
-    {"canonical":"React Native","aliases":[],"category":"mobile"},
-    {"canonical":"Flutter","aliases":[],"category":"mobile"},
-    {"canonical":"Android","aliases":["kotlin android","java android"],"category":"mobile"},
-    {"canonical":"iOS","aliases":["swift ios","objective-c ios"],"category":"mobile"},
-
-    {"canonical":"Electron","aliases":[],"category":"desktop"},
-    {"canonical":"WPF","aliases":[],"category":"desktop"},
-    {"canonical":"Qt","aliases":[],"category":"desktop"},
-
-    {"canonical":"OWASP","aliases":[],"category":"security"},
-    {"canonical":"Penetration Testing","aliases":["pentest"],"category":"security"},
-    {"canonical":"SIEM","aliases":["security information and event management","splunk"],"category":"security"},
-    {"canonical":"IAM","aliases":["identity and access management"],"category":"security"},
-    {"canonical":"SOC","aliases":["security operations center"],"category":"security"},
-
-    {"canonical":"Selenium","aliases":[],"category":"qa"},
-    {"canonical":"Cypress","aliases":[],"category":"qa"},
-    {"canonical":"Playwright","aliases":[],"category":"qa"},
-    {"canonical":"JUnit","aliases":[],"category":"qa"},
-    {"canonical":"PyTest","aliases":["pytest"],"category":"qa"},
-    {"canonical":"Test Automation","aliases":["automation testing"],"category":"qa"},
-
-    {"canonical":"Product Management","aliases":["product manager","pm"],"category":"business"},
-    {"canonical":"Project Management","aliases":["pmp","scrum master"],"category":"business"},
-    {"canonical":"Agile","aliases":["scrum","kanban"],"category":"business"},
-    {"canonical":"Business Analysis","aliases":["ba","business analyst"],"category":"business"},
-    {"canonical":"OKRs","aliases":["objectives and key results"],"category":"business"},
-    {"canonical":"Roadmapping","aliases":[],"category":"business"},
-
-    {"canonical":"SEO","aliases":["search engine optimization"],"category":"marketing"},
-    {"canonical":"Content Marketing","aliases":[],"category":"marketing"},
-    {"canonical":"Performance Marketing","aliases":["paid marketing"],"category":"marketing"},
-    {"canonical":"Google Ads","aliases":["adwords"],"category":"marketing"},
-    {"canonical":"Facebook Ads","aliases":["meta ads"],"category":"marketing"},
-    {"canonical":"Email Marketing","aliases":[],"category":"marketing"},
-    {"canonical":"HubSpot","aliases":[],"category":"marketing"},
-    {"canonical":"Salesforce","aliases":["sfdc"],"category":"sales"},
-    {"canonical":"CRM","aliases":[],"category":"sales"},
-
-    {"canonical":"Figma","aliases":[],"category":"design"},
-    {"canonical":"Sketch","aliases":[],"category":"design"},
-    {"canonical":"Adobe XD","aliases":["xd"],"category":"design"},
-    {"canonical":"UI/UX","aliases":["ui ux","ux/ui"],"category":"design"},
-    {"canonical":"Prototyping","aliases":[],"category":"design"},
-
-    {"canonical":"Financial Modeling","aliases":["finance modeling"],"category":"finance"},
-    {"canonical":"FP&A","aliases":["financial planning and analysis"],"category":"finance"},
-    {"canonical":"Accounting","aliases":["bookkeeping"],"category":"finance"},
-    {"canonical":"QuickBooks","aliases":[],"category":"finance"},
-    {"canonical":"SAP","aliases":["sap erp","sap fico"],"category":"finance"},
-
-    {"canonical":"Recruiting","aliases":["talent acquisition"],"category":"hr"},
-    {"canonical":"Onboarding","aliases":[],"category":"hr"},
-    {"canonical":"HRIS","aliases":["human resources information system"],"category":"hr"},
-
-    {"canonical":"Operations Management","aliases":[],"category":"ops"},
-    {"canonical":"Supply Chain","aliases":["supply chain management","scm"],"category":"ops"},
-    {"canonical":"Logistics","aliases":[],"category":"ops"},
-    {"canonical":"Procurement","aliases":["purchasing"],"category":"ops"},
-
-    {"canonical":"Customer Support","aliases":["customer service","cs"],"category":"support"},
-    {"canonical":"Zendesk","aliases":[],"category":"support"},
-    {"canonical":"Intercom","aliases":[],"category":"support"},
-
-    {"canonical":"Healthcare Analytics","aliases":[],"category":"healthcare"},
-    {"canonical":"HL7","aliases":[],"category":"healthcare"},
-    {"canonical":"FHIR","aliases":[],"category":"healthcare"},
-
-    
-    {"canonical":"Instructional Design","aliases":[],"category":"education"},
-    {"canonical":"LMS","aliases":["learning management system","moodle","canvas"],"category":"education"},
-
-    
-    {"canonical":"Contract Review","aliases":[],"category":"legal"},
-    {"canonical":"Compliance","aliases":["regulatory compliance"],"category":"legal"},
-
-    
-    {"canonical":"Unity","aliases":[],"category":"gamedev"},
-    {"canonical":"Unreal Engine","aliases":["ue","ue5"],"category":"gamedev"},
-    {"canonical":"Cocos2d","aliases":[],"category":"gamedev"},
-
-    { "canonical": "Artificial Intelligence", "aliases": ["AI", "artificial intelligence"], "category": "ml" },
-    { "canonical": "Machine Learning", "aliases": ["ML", "machine learning", "ml engineer", "machine learning engineer"], "category": "ml" },
-    { "canonical": "Generative AI", "aliases": ["GenAI", "generative ai", "gen ai"], "category": "mlops" },
-    { "canonical": "RAG", "aliases": ["retrieval augmented generation", "retrieval-augmented generation"], "category": "mlops" },
-    { "canonical": "Hugging Face", "aliases": ["hf", "huggingface", "transformers"], "category": "mlops" },
-    { "canonical": "OpenAI API", "aliases": ["openai", "gpt-4", "gpt4", "chatgpt api", "chatgpt"], "category": "mlops" }
-
+    {
+      "canonical": ".NET",
+      "aliases": [
+        ".net core",
+        "asp.net",
+        "asp.net core",
+        "dotnet"
+      ],
+      "category": "backend",
+      "tags": [
+        "apis",
+        "backend",
+        "server",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Accounting",
+      "aliases": [
+        "bookkeeping"
+      ],
+      "category": "finance",
+      "tags": [
+        "accounting",
+        "finance"
+      ]
+    },
+    {
+      "canonical": "ACLS",
+      "aliases": [
+        "advanced cardiac life support"
+      ],
+      "category": "nursing",
+      "tags": [
+        "clinical",
+        "resuscitation"
+      ]
+    },
+    {
+      "canonical": "Adobe XD",
+      "aliases": [
+        "xd"
+      ],
+      "category": "design",
+      "tags": [
+        "design",
+        "ui",
+        "ux"
+      ]
+    },
+    {
+      "canonical": "Agile",
+      "aliases": [
+        "kanban",
+        "scrum"
+      ],
+      "category": "business",
+      "tags": [
+        "business",
+        "management",
+        "product"
+      ]
+    },
+    {
+      "canonical": "Airflow",
+      "aliases": [],
+      "category": "data",
+      "tags": [
+        "analytics",
+        "data",
+        "engineering"
+      ]
+    },
+    {
+      "canonical": "Airway Management",
+      "aliases": [],
+      "category": "clinical",
+      "tags": [
+        "procedures",
+        "respiratory"
+      ]
+    },
+    {
+      "canonical": "Allscripts",
+      "aliases": [],
+      "category": "ehr",
+      "tags": [
+        "clinical-systems",
+        "ehr"
+      ]
+    },
+    {
+      "canonical": "Android",
+      "aliases": [
+        "java android",
+        "kotlin android"
+      ],
+      "category": "mobile",
+      "tags": [
+        "apps",
+        "mobile"
+      ]
+    },
+    {
+      "canonical": "Angular",
+      "aliases": [
+        "angularjs"
+      ],
+      "category": "frontend",
+      "tags": [
+        "frontend",
+        "javascript-ecosystem",
+        "spa",
+        "ui",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Ansible",
+      "aliases": [],
+      "category": "devops",
+      "tags": [
+        "automation",
+        "devops",
+        "infrastructure",
+        "observability",
+        "platform"
+      ]
+    },
+    {
+      "canonical": "Apache",
+      "aliases": [
+        "apache httpd"
+      ],
+      "category": "devops",
+      "tags": [
+        "automation",
+        "devops",
+        "infrastructure",
+        "observability",
+        "platform"
+      ]
+    },
+    {
+      "canonical": "Apache Beam",
+      "aliases": [
+        "beam"
+      ],
+      "category": "data",
+      "tags": [
+        "analytics",
+        "data",
+        "engineering"
+      ]
+    },
+    {
+      "canonical": "Apache Flink",
+      "aliases": [
+        "flink"
+      ],
+      "category": "data",
+      "tags": [
+        "analytics",
+        "data",
+        "engineering"
+      ]
+    },
+    {
+      "canonical": "Apache Spark",
+      "aliases": [
+        "pyspark",
+        "spark"
+      ],
+      "category": "data",
+      "tags": [
+        "analytics",
+        "data",
+        "engineering"
+      ]
+    },
+    {
+      "canonical": "Argo CD",
+      "aliases": [
+        "argocd"
+      ],
+      "category": "devops",
+      "tags": [
+        "automation",
+        "devops",
+        "infrastructure",
+        "observability",
+        "platform"
+      ]
+    },
+    {
+      "canonical": "Artificial Intelligence",
+      "aliases": [
+        "AI",
+        "artificial intelligence"
+      ],
+      "category": "ml",
+      "tags": [
+        "ai",
+        "data-science",
+        "ml"
+      ]
+    },
+    {
+      "canonical": "Aseptic Technique",
+      "aliases": [],
+      "category": "nursing",
+      "tags": [
+        "clinical",
+        "infection-control"
+      ]
+    },
+    {
+      "canonical": "Athenahealth",
+      "aliases": [
+        "athena"
+      ],
+      "category": "ehr",
+      "tags": [
+        "clinical-systems",
+        "ehr"
+      ]
+    },
+    {
+      "canonical": "AWS",
+      "aliases": [
+        "amazon web services"
+      ],
+      "category": "cloud",
+      "tags": [
+        "cloud",
+        "infrastructure"
+      ]
+    },
+    {
+      "canonical": "Azure",
+      "aliases": [
+        "microsoft azure"
+      ],
+      "category": "cloud",
+      "tags": [
+        "cloud",
+        "infrastructure"
+      ]
+    },
+    {
+      "canonical": "BentoML",
+      "aliases": [],
+      "category": "mlops",
+      "tags": [
+        "ai",
+        "deployment",
+        "ml",
+        "mlops"
+      ]
+    },
+    {
+      "canonical": "BigQuery",
+      "aliases": [
+        "google bigquery"
+      ],
+      "category": "database",
+      "tags": [
+        "data",
+        "database",
+        "persistence",
+        "storage"
+      ]
+    },
+    {
+      "canonical": "Blood Transfusion",
+      "aliases": [
+        "transfusion administration"
+      ],
+      "category": "nursing",
+      "tags": [
+        "clinical",
+        "procedures"
+      ]
+    },
+    {
+      "canonical": "BullMQ",
+      "aliases": [
+        "bull"
+      ],
+      "category": "backend",
+      "tags": [
+        "apis",
+        "backend",
+        "server",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Burp Suite",
+      "aliases": [
+        "burpsuite"
+      ],
+      "category": "security",
+      "tags": [
+        "appsec",
+        "security"
+      ]
+    },
+    {
+      "canonical": "Business Analysis",
+      "aliases": [
+        "ba",
+        "business analyst"
+      ],
+      "category": "business",
+      "tags": [
+        "business",
+        "management",
+        "product"
+      ]
+    },
+    {
+      "canonical": "C#",
+      "aliases": [
+        "c sharp"
+      ],
+      "category": "language",
+      "tags": [
+        "programming-language"
+      ]
+    },
+    {
+      "canonical": "C++",
+      "aliases": [
+        "cpp"
+      ],
+      "category": "language",
+      "tags": [
+        "programming-language"
+      ]
+    },
+    {
+      "canonical": "Cardiology",
+      "aliases": [],
+      "category": "medical-specialty",
+      "tags": [
+        "cardiology"
+      ]
+    },
+    {
+      "canonical": "Care Planning",
+      "aliases": [
+        "nursing care plan"
+      ],
+      "category": "nursing",
+      "tags": [
+        "documentation",
+        "patient-care"
+      ]
+    },
+    {
+      "canonical": "Cassandra",
+      "aliases": [],
+      "category": "database",
+      "tags": [
+        "data",
+        "database",
+        "persistence",
+        "storage"
+      ]
+    },
+    {
+      "canonical": "CatBoost",
+      "aliases": [],
+      "category": "ml",
+      "tags": [
+        "ai",
+        "data-science",
+        "ml"
+      ]
+    },
+    {
+      "canonical": "Catheterization",
+      "aliases": [
+        "foley catheter",
+        "urinary catheterization"
+      ],
+      "category": "nursing",
+      "tags": [
+        "clinical",
+        "procedures"
+      ]
+    },
+    {
+      "canonical": "Central Line Care",
+      "aliases": [
+        "CVC care"
+      ],
+      "category": "clinical",
+      "tags": [
+        "icu",
+        "procedures"
+      ]
+    },
+    {
+      "canonical": "Cerner",
+      "aliases": [
+        "cerner millennium",
+        "oracle health"
+      ],
+      "category": "ehr",
+      "tags": [
+        "clinical-systems",
+        "ehr"
+      ]
+    },
+    {
+      "canonical": "Chest Tube Management",
+      "aliases": [],
+      "category": "clinical",
+      "tags": [
+        "icu",
+        "procedures"
+      ]
+    },
+    {
+      "canonical": "Chroma",
+      "aliases": [
+        "chromadb"
+      ],
+      "category": "mlops",
+      "tags": [
+        "ai",
+        "deployment",
+        "ml",
+        "mlops"
+      ]
+    },
+    {
+      "canonical": "CI/CD",
+      "aliases": [
+        "ci cd",
+        "continuous delivery",
+        "continuous integration",
+        "pipelines"
+      ],
+      "category": "devops",
+      "tags": [
+        "automation",
+        "devops",
+        "infrastructure",
+        "observability",
+        "platform"
+      ]
+    },
+    {
+      "canonical": "CircleCI",
+      "aliases": [],
+      "category": "devops",
+      "tags": [
+        "automation",
+        "devops",
+        "infrastructure",
+        "observability",
+        "platform"
+      ]
+    },
+    {
+      "canonical": "Cloudflare",
+      "aliases": [],
+      "category": "cloud",
+      "tags": [
+        "cloud",
+        "infrastructure"
+      ]
+    },
+    {
+      "canonical": "Cocos2d",
+      "aliases": [],
+      "category": "gamedev",
+      "tags": [
+        "3d",
+        "gamedev",
+        "realtime"
+      ]
+    },
+    {
+      "canonical": "Compliance",
+      "aliases": [
+        "regulatory compliance"
+      ],
+      "category": "legal",
+      "tags": [
+        "compliance",
+        "legal"
+      ]
+    },
+    {
+      "canonical": "Computer Vision",
+      "aliases": [
+        "cv"
+      ],
+      "category": "ml",
+      "tags": [
+        "ai",
+        "data-science",
+        "ml"
+      ]
+    },
+    {
+      "canonical": "Content Marketing",
+      "aliases": [],
+      "category": "marketing",
+      "tags": [
+        "growth",
+        "marketing"
+      ]
+    },
+    {
+      "canonical": "Contract Review",
+      "aliases": [],
+      "category": "legal",
+      "tags": [
+        "compliance",
+        "legal"
+      ]
+    },
+    {
+      "canonical": "CPAP/BiPAP",
+      "aliases": [
+        "BiPAP",
+        "CPAP"
+      ],
+      "category": "medical-devices",
+      "tags": [
+        "devices",
+        "respiratory"
+      ]
+    },
+    {
+      "canonical": "CPR/BLS",
+      "aliases": [
+        "BLS",
+        "basic life support"
+      ],
+      "category": "nursing",
+      "tags": [
+        "clinical",
+        "resuscitation"
+      ]
+    },
+    {
+      "canonical": "CPT",
+      "aliases": [
+        "current procedural terminology"
+      ],
+      "category": "medical-standards",
+      "tags": [
+        "coding",
+        "procedure-codes"
+      ]
+    },
+    {
+      "canonical": "CRM",
+      "aliases": [],
+      "category": "sales",
+      "tags": [
+        "crm",
+        "sales"
+      ]
+    },
+    {
+      "canonical": "CSS",
+      "aliases": [],
+      "category": "frontend",
+      "tags": [
+        "frontend",
+        "javascript-ecosystem",
+        "spa",
+        "ui",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Cultural Competence",
+      "aliases": [],
+      "category": "nursing",
+      "tags": [
+        "communication"
+      ]
+    },
+    {
+      "canonical": "Customer Support",
+      "aliases": [
+        "cs",
+        "customer service"
+      ],
+      "category": "support",
+      "tags": [
+        "customer",
+        "support"
+      ]
+    },
+    {
+      "canonical": "Cypress",
+      "aliases": [],
+      "category": "qa",
+      "tags": [
+        "automation",
+        "qa",
+        "testing"
+      ]
+    },
+    {
+      "canonical": "Dask",
+      "aliases": [],
+      "category": "data",
+      "tags": [
+        "analytics",
+        "data",
+        "engineering"
+      ]
+    },
+    {
+      "canonical": "DAST",
+      "aliases": [
+        "dynamic application security testing"
+      ],
+      "category": "security",
+      "tags": [
+        "appsec",
+        "security"
+      ]
+    },
+    {
+      "canonical": "dbt",
+      "aliases": [
+        "data build tool"
+      ],
+      "category": "data",
+      "tags": [
+        "analytics",
+        "data",
+        "engineering"
+      ]
+    },
+    {
+      "canonical": "Defibrillator/AED",
+      "aliases": [
+        "AED"
+      ],
+      "category": "medical-devices",
+      "tags": [
+        "devices",
+        "resuscitation"
+      ]
+    },
+    {
+      "canonical": "Dialysis",
+      "aliases": [
+        "hemodialysis",
+        "peritoneal dialysis"
+      ],
+      "category": "medical-specialty",
+      "tags": [
+        "nephrology"
+      ]
+    },
+    {
+      "canonical": "DICOM",
+      "aliases": [],
+      "category": "medical-standards",
+      "tags": [
+        "imaging",
+        "radiology"
+      ]
+    },
+    {
+      "canonical": "Django",
+      "aliases": [
+        "django framework"
+      ],
+      "category": "backend",
+      "tags": [
+        "apis",
+        "backend",
+        "server",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Docker",
+      "aliases": [
+        "containers"
+      ],
+      "category": "devops",
+      "tags": [
+        "automation",
+        "devops",
+        "infrastructure",
+        "observability",
+        "platform"
+      ]
+    },
+    {
+      "canonical": "DuckDB",
+      "aliases": [],
+      "category": "database",
+      "tags": [
+        "data",
+        "database",
+        "persistence",
+        "storage"
+      ]
+    },
+    {
+      "canonical": "DynamoDB",
+      "aliases": [],
+      "category": "database",
+      "tags": [
+        "data",
+        "database",
+        "persistence",
+        "storage"
+      ]
+    },
+    {
+      "canonical": "ECG Machine",
+      "aliases": [
+        "EKG Machine"
+      ],
+      "category": "medical-devices",
+      "tags": [
+        "cardiology",
+        "devices"
+      ]
+    },
+    {
+      "canonical": "eClinicalWorks",
+      "aliases": [
+        "ecw"
+      ],
+      "category": "ehr",
+      "tags": [
+        "clinical-systems",
+        "ehr"
+      ]
+    },
+    {
+      "canonical": "EFK",
+      "aliases": [
+        "elasticsearch fluentd kibana",
+        "fluent-bit"
+      ],
+      "category": "devops",
+      "tags": [
+        "automation",
+        "devops",
+        "infrastructure",
+        "observability",
+        "platform"
+      ]
+    },
+    {
+      "canonical": "EKG Interpretation",
+      "aliases": [
+        "ECG interpretation"
+      ],
+      "category": "clinical",
+      "tags": [
+        "cardiology",
+        "diagnostics"
+      ]
+    },
+    {
+      "canonical": "Elasticsearch",
+      "aliases": [
+        "elastic",
+        "es"
+      ],
+      "category": "search",
+      "tags": [
+        "data",
+        "indexing",
+        "search"
+      ]
+    },
+    {
+      "canonical": "Electron",
+      "aliases": [],
+      "category": "desktop",
+      "tags": [
+        "apps",
+        "desktop"
+      ]
+    },
+    {
+      "canonical": "ELK",
+      "aliases": [
+        "elastic stack",
+        "kibana",
+        "logstash"
+      ],
+      "category": "devops",
+      "tags": [
+        "automation",
+        "devops",
+        "infrastructure",
+        "observability",
+        "platform"
+      ]
+    },
+    {
+      "canonical": "Email Marketing",
+      "aliases": [],
+      "category": "marketing",
+      "tags": [
+        "growth",
+        "marketing"
+      ]
+    },
+    {
+      "canonical": "Emergency Department",
+      "aliases": [
+        "Accident & Emergency",
+        "ED",
+        "ER"
+      ],
+      "category": "medical-specialty",
+      "tags": [
+        "emergency"
+      ]
+    },
+    {
+      "canonical": "Emotion",
+      "aliases": [],
+      "category": "frontend",
+      "tags": [
+        "frontend",
+        "javascript-ecosystem",
+        "spa",
+        "ui",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Epic",
+      "aliases": [
+        "epic ehr",
+        "epic hyperspace"
+      ],
+      "category": "ehr",
+      "tags": [
+        "clinical-systems",
+        "ehr"
+      ]
+    },
+    {
+      "canonical": "Evidence-Based Practice",
+      "aliases": [
+        "EBP"
+      ],
+      "category": "clinical",
+      "tags": [
+        "quality"
+      ]
+    },
+    {
+      "canonical": "Express",
+      "aliases": [
+        "express.js",
+        "expressjs"
+      ],
+      "category": "backend",
+      "tags": [
+        "apis",
+        "backend",
+        "server",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Facebook Ads",
+      "aliases": [
+        "meta ads"
+      ],
+      "category": "marketing",
+      "tags": [
+        "growth",
+        "marketing"
+      ]
+    },
+    {
+      "canonical": "Falls Prevention",
+      "aliases": [],
+      "category": "nursing",
+      "tags": [
+        "safety"
+      ]
+    },
+    {
+      "canonical": "FastAPI",
+      "aliases": [
+        "fast api"
+      ],
+      "category": "backend",
+      "tags": [
+        "apis",
+        "backend",
+        "server",
+        "web"
+      ]
+    },
+    {
+      "canonical": "FHIR",
+      "aliases": [],
+      "category": "healthcare",
+      "tags": [
+        "healthcare",
+        "industry"
+      ]
+    },
+    {
+      "canonical": "Figma",
+      "aliases": [],
+      "category": "design",
+      "tags": [
+        "design",
+        "ui",
+        "ux"
+      ]
+    },
+    {
+      "canonical": "Financial Modeling",
+      "aliases": [
+        "finance modeling"
+      ],
+      "category": "finance",
+      "tags": [
+        "accounting",
+        "finance"
+      ]
+    },
+    {
+      "canonical": "Firebase Firestore",
+      "aliases": [
+        "firestore"
+      ],
+      "category": "database",
+      "tags": [
+        "data",
+        "database",
+        "persistence",
+        "storage"
+      ]
+    },
+    {
+      "canonical": "Flask",
+      "aliases": [
+        "flask framework"
+      ],
+      "category": "backend",
+      "tags": [
+        "apis",
+        "backend",
+        "server",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Flutter",
+      "aliases": [],
+      "category": "mobile",
+      "tags": [
+        "apps",
+        "mobile"
+      ]
+    },
+    {
+      "canonical": "Fly.io",
+      "aliases": [
+        "flyio"
+      ],
+      "category": "cloud",
+      "tags": [
+        "cloud",
+        "infrastructure"
+      ]
+    },
+    {
+      "canonical": "FP&A",
+      "aliases": [
+        "financial planning and analysis"
+      ],
+      "category": "finance",
+      "tags": [
+        "accounting",
+        "finance"
+      ]
+    },
+    {
+      "canonical": "Framer Motion",
+      "aliases": [
+        "framer-motion"
+      ],
+      "category": "frontend",
+      "tags": [
+        "frontend",
+        "javascript-ecosystem",
+        "spa",
+        "ui",
+        "web"
+      ]
+    },
+    {
+      "canonical": "GCP",
+      "aliases": [
+        "google cloud"
+      ],
+      "category": "cloud",
+      "tags": [
+        "cloud",
+        "infrastructure"
+      ]
+    },
+    {
+      "canonical": "Generative AI",
+      "aliases": [
+        "GenAI",
+        "gen ai",
+        "generative ai"
+      ],
+      "category": "mlops",
+      "tags": [
+        "ai",
+        "deployment",
+        "ml",
+        "mlops"
+      ]
+    },
+    {
+      "canonical": "Geriatrics",
+      "aliases": [],
+      "category": "medical-specialty",
+      "tags": [
+        "geriatrics"
+      ]
+    },
+    {
+      "canonical": "GitHub Actions",
+      "aliases": [
+        "gha"
+      ],
+      "category": "devops",
+      "tags": [
+        "automation",
+        "devops",
+        "infrastructure",
+        "observability",
+        "platform"
+      ]
+    },
+    {
+      "canonical": "GitLab CI",
+      "aliases": [
+        "gitlab pipelines",
+        "gitlab-ci"
+      ],
+      "category": "devops",
+      "tags": [
+        "automation",
+        "devops",
+        "infrastructure",
+        "observability",
+        "platform"
+      ]
+    },
+    {
+      "canonical": "Glucometer",
+      "aliases": [],
+      "category": "medical-devices",
+      "tags": [
+        "devices",
+        "endocrine"
+      ]
+    },
+    {
+      "canonical": "Go",
+      "aliases": [
+        "golang"
+      ],
+      "category": "backend",
+      "tags": [
+        "apis",
+        "backend",
+        "server",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Google Ads",
+      "aliases": [
+        "adwords"
+      ],
+      "category": "marketing",
+      "tags": [
+        "growth",
+        "marketing"
+      ]
+    },
+    {
+      "canonical": "Grafana",
+      "aliases": [],
+      "category": "devops",
+      "tags": [
+        "automation",
+        "devops",
+        "infrastructure",
+        "observability",
+        "platform"
+      ]
+    },
+    {
+      "canonical": "GraphQL",
+      "aliases": [
+        "graphql api"
+      ],
+      "category": "apis",
+      "tags": [
+        "api",
+        "integration",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Great Expectations",
+      "aliases": [
+        "gx"
+      ],
+      "category": "data",
+      "tags": [
+        "analytics",
+        "data",
+        "engineering"
+      ]
+    },
+    {
+      "canonical": "gRPC",
+      "aliases": [],
+      "category": "apis",
+      "tags": [
+        "api",
+        "integration",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Healthcare Analytics",
+      "aliases": [],
+      "category": "healthcare",
+      "tags": [
+        "healthcare",
+        "industry"
+      ]
+    },
+    {
+      "canonical": "Helm",
+      "aliases": [],
+      "category": "devops",
+      "tags": [
+        "automation",
+        "devops",
+        "infrastructure",
+        "observability",
+        "platform"
+      ]
+    },
+    {
+      "canonical": "Heparin Protocols",
+      "aliases": [],
+      "category": "nursing",
+      "tags": [
+        "anticoagulation",
+        "clinical"
+      ]
+    },
+    {
+      "canonical": "HIPAA",
+      "aliases": [],
+      "category": "medical-standards",
+      "tags": [
+        "compliance",
+        "privacy"
+      ]
+    },
+    {
+      "canonical": "HL7",
+      "aliases": [],
+      "category": "healthcare",
+      "tags": [
+        "healthcare",
+        "industry"
+      ]
+    },
+    {
+      "canonical": "Home Health",
+      "aliases": [],
+      "category": "medical-specialty",
+      "tags": [
+        "community",
+        "home-health"
+      ]
+    },
+    {
+      "canonical": "HRIS",
+      "aliases": [
+        "human resources information system"
+      ],
+      "category": "hr",
+      "tags": [
+        "hr",
+        "people-ops"
+      ]
+    },
+    {
+      "canonical": "HTML",
+      "aliases": [],
+      "category": "frontend",
+      "tags": [
+        "frontend",
+        "javascript-ecosystem",
+        "spa",
+        "ui",
+        "web"
+      ]
+    },
+    {
+      "canonical": "HubSpot",
+      "aliases": [],
+      "category": "marketing",
+      "tags": [
+        "growth",
+        "marketing"
+      ]
+    },
+    {
+      "canonical": "Hugging Face",
+      "aliases": [
+        "hf",
+        "huggingface",
+        "transformers"
+      ],
+      "category": "mlops",
+      "tags": [
+        "ai",
+        "deployment",
+        "ml",
+        "mlops"
+      ]
+    },
+    {
+      "canonical": "IAM",
+      "aliases": [
+        "identity and access management"
+      ],
+      "category": "security",
+      "tags": [
+        "appsec",
+        "security"
+      ]
+    },
+    {
+      "canonical": "ICD-10",
+      "aliases": [],
+      "category": "medical-standards",
+      "tags": [
+        "coding",
+        "diagnosis-codes"
+      ]
+    },
+    {
+      "canonical": "ICU/Critical Care",
+      "aliases": [
+        "critical care"
+      ],
+      "category": "medical-specialty",
+      "tags": [
+        "critical-care",
+        "icu"
+      ]
+    },
+    {
+      "canonical": "Infection Control",
+      "aliases": [
+        "infection prevention"
+      ],
+      "category": "nursing",
+      "tags": [
+        "clinical",
+        "infection-control"
+      ]
+    },
+    {
+      "canonical": "Infusion Pump",
+      "aliases": [],
+      "category": "medical-devices",
+      "tags": [
+        "devices",
+        "infusion"
+      ]
+    },
+    {
+      "canonical": "Instructional Design",
+      "aliases": [],
+      "category": "education",
+      "tags": [
+        "education",
+        "industry"
+      ]
+    },
+    {
+      "canonical": "Insulin Administration",
+      "aliases": [],
+      "category": "nursing",
+      "tags": [
+        "clinical",
+        "endocrine"
+      ]
+    },
+    {
+      "canonical": "Intercom",
+      "aliases": [],
+      "category": "support",
+      "tags": [
+        "customer",
+        "support"
+      ]
+    },
+    {
+      "canonical": "iOS",
+      "aliases": [
+        "objective-c ios",
+        "swift ios"
+      ],
+      "category": "mobile",
+      "tags": [
+        "apps",
+        "mobile"
+      ]
+    },
+    {
+      "canonical": "Isolation Precautions",
+      "aliases": [],
+      "category": "nursing",
+      "tags": [
+        "clinical",
+        "infection-control"
+      ]
+    },
+    {
+      "canonical": "IV Therapy",
+      "aliases": [
+        "IV insertion",
+        "intravenous therapy"
+      ],
+      "category": "nursing",
+      "tags": [
+        "clinical",
+        "procedures"
+      ]
+    },
+    {
+      "canonical": "Java",
+      "aliases": [],
+      "category": "language",
+      "tags": [
+        "programming-language"
+      ]
+    },
+    {
+      "canonical": "JavaScript",
+      "aliases": [
+        "js"
+      ],
+      "category": "language",
+      "tags": [
+        "programming-language"
+      ]
+    },
+    {
+      "canonical": "Jenkins",
+      "aliases": [],
+      "category": "devops",
+      "tags": [
+        "automation",
+        "devops",
+        "infrastructure",
+        "observability",
+        "platform"
+      ]
+    },
+    {
+      "canonical": "JMeter",
+      "aliases": [
+        "apache jmeter"
+      ],
+      "category": "qa",
+      "tags": [
+        "automation",
+        "qa",
+        "testing"
+      ]
+    },
+    {
+      "canonical": "JUnit",
+      "aliases": [],
+      "category": "qa",
+      "tags": [
+        "automation",
+        "qa",
+        "testing"
+      ]
+    },
+    {
+      "canonical": "JWT",
+      "aliases": [
+        "json web token"
+      ],
+      "category": "security",
+      "tags": [
+        "appsec",
+        "security"
+      ]
+    },
+    {
+      "canonical": "k6",
+      "aliases": [
+        "k6.io"
+      ],
+      "category": "qa",
+      "tags": [
+        "automation",
+        "qa",
+        "testing"
+      ]
+    },
+    {
+      "canonical": "Kafka",
+      "aliases": [
+        "apache kafka"
+      ],
+      "category": "data",
+      "tags": [
+        "analytics",
+        "data",
+        "engineering"
+      ]
+    },
+    {
+      "canonical": "Keras",
+      "aliases": [],
+      "category": "ml",
+      "tags": [
+        "ai",
+        "data-science",
+        "ml"
+      ]
+    },
+    {
+      "canonical": "Keycloak",
+      "aliases": [],
+      "category": "security",
+      "tags": [
+        "appsec",
+        "security"
+      ]
+    },
+    {
+      "canonical": "Kotlin",
+      "aliases": [],
+      "category": "mobile",
+      "tags": [
+        "apps",
+        "mobile"
+      ]
+    },
+    {
+      "canonical": "Kubernetes",
+      "aliases": [
+        "k8s"
+      ],
+      "category": "devops",
+      "tags": [
+        "automation",
+        "devops",
+        "infrastructure",
+        "observability",
+        "platform"
+      ]
+    },
+    {
+      "canonical": "Labor & Delivery",
+      "aliases": [
+        "L&D",
+        "obstetrics"
+      ],
+      "category": "medical-specialty",
+      "tags": [
+        "maternity",
+        "obgyn"
+      ]
+    },
+    {
+      "canonical": "LangChain",
+      "aliases": [],
+      "category": "mlops",
+      "tags": [
+        "ai",
+        "deployment",
+        "ml",
+        "mlops"
+      ]
+    },
+    {
+      "canonical": "LangGraph",
+      "aliases": [
+        "lang graph"
+      ],
+      "category": "mlops",
+      "tags": [
+        "ai",
+        "deployment",
+        "ml",
+        "mlops"
+      ]
+    },
+    {
+      "canonical": "Laravel",
+      "aliases": [
+        "php laravel"
+      ],
+      "category": "backend",
+      "tags": [
+        "apis",
+        "backend",
+        "server",
+        "web"
+      ]
+    },
+    {
+      "canonical": "LightGBM",
+      "aliases": [
+        "lgbm"
+      ],
+      "category": "ml",
+      "tags": [
+        "ai",
+        "data-science",
+        "ml"
+      ]
+    },
+    {
+      "canonical": "Linux",
+      "aliases": [],
+      "category": "devops",
+      "tags": [
+        "automation",
+        "devops",
+        "infrastructure",
+        "observability",
+        "platform"
+      ]
+    },
+    {
+      "canonical": "LIS",
+      "aliases": [
+        "laboratory information system"
+      ],
+      "category": "ehr",
+      "tags": [
+        "clinical-systems",
+        "lab"
+      ]
+    },
+    {
+      "canonical": "LlamaIndex",
+      "aliases": [
+        "gpt index"
+      ],
+      "category": "mlops",
+      "tags": [
+        "ai",
+        "deployment",
+        "ml",
+        "mlops"
+      ]
+    },
+    {
+      "canonical": "LLMs",
+      "aliases": [
+        "foundation models",
+        "large language models"
+      ],
+      "category": "mlops",
+      "tags": [
+        "ai",
+        "deployment",
+        "ml",
+        "mlops"
+      ]
+    },
+    {
+      "canonical": "LMS",
+      "aliases": [
+        "canvas",
+        "learning management system",
+        "moodle"
+      ],
+      "category": "education",
+      "tags": [
+        "education",
+        "industry"
+      ]
+    },
+    {
+      "canonical": "Logistics",
+      "aliases": [],
+      "category": "ops",
+      "tags": [
+        "logistics",
+        "operations"
+      ]
+    },
+    {
+      "canonical": "LOINC",
+      "aliases": [],
+      "category": "medical-standards",
+      "tags": [
+        "lab-codes"
+      ]
+    },
+    {
+      "canonical": "Long-Term Care",
+      "aliases": [
+        "LTC",
+        "skilled nursing"
+      ],
+      "category": "medical-specialty",
+      "tags": [
+        "geriatrics",
+        "ltc"
+      ]
+    },
+    {
+      "canonical": "Looker",
+      "aliases": [
+        "google data studio",
+        "looker studio"
+      ],
+      "category": "bi",
+      "tags": [
+        "analytics",
+        "bi",
+        "dashboards",
+        "data"
+      ]
+    },
+    {
+      "canonical": "Machine Learning",
+      "aliases": [
+        "ML",
+        "machine learning",
+        "machine learning engineer",
+        "ml engineer"
+      ],
+      "category": "ml",
+      "tags": [
+        "ai",
+        "data-science",
+        "ml"
+      ]
+    },
+    {
+      "canonical": "MariaDB",
+      "aliases": [],
+      "category": "database",
+      "tags": [
+        "data",
+        "database",
+        "persistence",
+        "storage"
+      ]
+    },
+    {
+      "canonical": "Med-Surg",
+      "aliases": [
+        "medical-surgical"
+      ],
+      "category": "medical-specialty",
+      "tags": [
+        "inpatient"
+      ]
+    },
+    {
+      "canonical": "Medication Administration",
+      "aliases": [
+        "med admin"
+      ],
+      "category": "nursing",
+      "tags": [
+        "clinical",
+        "nursing",
+        "pharmacology"
+      ]
+    },
+    {
+      "canonical": "Medication Reconciliation",
+      "aliases": [],
+      "category": "nursing",
+      "tags": [
+        "clinical",
+        "nursing",
+        "pharmacology"
+      ]
+    },
+    {
+      "canonical": "MEDITECH",
+      "aliases": [
+        "meditech ehr"
+      ],
+      "category": "ehr",
+      "tags": [
+        "clinical-systems",
+        "ehr"
+      ]
+    },
+    {
+      "canonical": "Meilisearch",
+      "aliases": [],
+      "category": "search",
+      "tags": [
+        "data",
+        "indexing",
+        "search"
+      ]
+    },
+    {
+      "canonical": "Metabase",
+      "aliases": [],
+      "category": "bi",
+      "tags": [
+        "analytics",
+        "bi",
+        "dashboards",
+        "data"
+      ]
+    },
+    {
+      "canonical": "Microsoft SQL Server",
+      "aliases": [
+        "mssql",
+        "sql server"
+      ],
+      "category": "database",
+      "tags": [
+        "data",
+        "database",
+        "persistence",
+        "storage"
+      ]
+    },
+    {
+      "canonical": "MLflow",
+      "aliases": [],
+      "category": "mlops",
+      "tags": [
+        "ai",
+        "deployment",
+        "ml",
+        "mlops"
+      ]
+    },
+    {
+      "canonical": "MLOps",
+      "aliases": [],
+      "category": "mlops",
+      "tags": [
+        "ai",
+        "deployment",
+        "ml",
+        "mlops"
+      ]
+    },
+    {
+      "canonical": "MongoDB",
+      "aliases": [
+        "mongodb atlas"
+      ],
+      "category": "database",
+      "tags": [
+        "data",
+        "database",
+        "persistence",
+        "storage"
+      ]
+    },
+    {
+      "canonical": "MySQL",
+      "aliases": [],
+      "category": "database",
+      "tags": [
+        "data",
+        "database",
+        "persistence",
+        "storage"
+      ]
+    },
+    {
+      "canonical": "Neo4j",
+      "aliases": [],
+      "category": "database",
+      "tags": [
+        "data",
+        "database",
+        "persistence",
+        "storage"
+      ]
+    },
+    {
+      "canonical": "Neonatal ICU",
+      "aliases": [
+        "NICU"
+      ],
+      "category": "medical-specialty",
+      "tags": [
+        "icu",
+        "neonatal"
+      ]
+    },
+    {
+      "canonical": "NestJS",
+      "aliases": [
+        "nest js"
+      ],
+      "category": "backend",
+      "tags": [
+        "apis",
+        "backend",
+        "server",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Netlify",
+      "aliases": [],
+      "category": "cloud",
+      "tags": [
+        "cloud",
+        "infrastructure"
+      ]
+    },
+    {
+      "canonical": "Newman",
+      "aliases": [],
+      "category": "qa",
+      "tags": [
+        "automation",
+        "qa",
+        "testing"
+      ]
+    },
+    {
+      "canonical": "Next.js",
+      "aliases": [
+        "nextjs"
+      ],
+      "category": "frontend",
+      "tags": [
+        "frontend",
+        "javascript-ecosystem",
+        "spa",
+        "ui",
+        "web"
+      ]
+    },
+    {
+      "canonical": "NextAuth.js",
+      "aliases": [
+        "next-auth",
+        "nextauth"
+      ],
+      "category": "frontend",
+      "tags": [
+        "frontend",
+        "javascript-ecosystem",
+        "spa",
+        "ui",
+        "web"
+      ]
+    },
+    {
+      "canonical": "NG Tube Insertion",
+      "aliases": [
+        "nasogastric tube"
+      ],
+      "category": "clinical",
+      "tags": [
+        "gastroenterology",
+        "procedures"
+      ]
+    },
+    {
+      "canonical": "Nginx",
+      "aliases": [
+        "nginx server"
+      ],
+      "category": "devops",
+      "tags": [
+        "automation",
+        "devops",
+        "infrastructure",
+        "observability",
+        "platform"
+      ]
+    },
+    {
+      "canonical": "NLP",
+      "aliases": [
+        "natural language processing"
+      ],
+      "category": "ml",
+      "tags": [
+        "ai",
+        "data-science",
+        "ml"
+      ]
+    },
+    {
+      "canonical": "Node.js",
+      "aliases": [
+        "node",
+        "node js",
+        "node.js",
+        "nodejs"
+      ],
+      "category": "backend",
+      "tags": [
+        "apis",
+        "backend",
+        "server",
+        "web"
+      ]
+    },
+    {
+      "canonical": "NRP",
+      "aliases": [
+        "neonatal resuscitation program"
+      ],
+      "category": "nursing",
+      "tags": [
+        "clinical",
+        "neonatal",
+        "resuscitation"
+      ]
+    },
+    {
+      "canonical": "NumPy",
+      "aliases": [
+        "numpy"
+      ],
+      "category": "data",
+      "tags": [
+        "analytics",
+        "data",
+        "engineering"
+      ]
+    },
+    {
+      "canonical": "Nuxt.js",
+      "aliases": [
+        "nuxt"
+      ],
+      "category": "frontend",
+      "tags": [
+        "frontend",
+        "javascript-ecosystem",
+        "spa",
+        "ui",
+        "web"
+      ]
+    },
+    {
+      "canonical": "OAuth 2.0",
+      "aliases": [
+        "oauth2"
+      ],
+      "category": "security",
+      "tags": [
+        "appsec",
+        "security"
+      ]
+    },
+    {
+      "canonical": "OIDC",
+      "aliases": [
+        "open id connect"
+      ],
+      "category": "security",
+      "tags": [
+        "appsec",
+        "security"
+      ]
+    },
+    {
+      "canonical": "OKRs",
+      "aliases": [
+        "objectives and key results"
+      ],
+      "category": "business",
+      "tags": [
+        "business",
+        "management",
+        "product"
+      ]
+    },
+    {
+      "canonical": "Onboarding",
+      "aliases": [],
+      "category": "hr",
+      "tags": [
+        "hr",
+        "people-ops"
+      ]
+    },
+    {
+      "canonical": "Oncology",
+      "aliases": [],
+      "category": "medical-specialty",
+      "tags": [
+        "oncology"
+      ]
+    },
+    {
+      "canonical": "ONNX",
+      "aliases": [],
+      "category": "mlops",
+      "tags": [
+        "ai",
+        "deployment",
+        "ml",
+        "mlops"
+      ]
+    },
+    {
+      "canonical": "OpenAI API",
+      "aliases": [
+        "chatgpt",
+        "chatgpt api",
+        "gpt-4",
+        "gpt4",
+        "openai"
+      ],
+      "category": "mlops",
+      "tags": [
+        "ai",
+        "deployment",
+        "ml",
+        "mlops"
+      ]
+    },
+    {
+      "canonical": "OpenSearch",
+      "aliases": [],
+      "category": "search",
+      "tags": [
+        "data",
+        "indexing",
+        "search"
+      ]
+    },
+    {
+      "canonical": "OpenVINO",
+      "aliases": [],
+      "category": "mlops",
+      "tags": [
+        "ai",
+        "deployment",
+        "ml",
+        "mlops"
+      ]
+    },
+    {
+      "canonical": "Operating Room",
+      "aliases": [
+        "Circulating Nurse",
+        "OR",
+        "Scrub Nursing",
+        "Surgery"
+      ],
+      "category": "medical-specialty",
+      "tags": [
+        "perioperative"
+      ]
+    },
+    {
+      "canonical": "Operations Management",
+      "aliases": [],
+      "category": "ops",
+      "tags": [
+        "logistics",
+        "operations"
+      ]
+    },
+    {
+      "canonical": "Oracle",
+      "aliases": [
+        "oracle db"
+      ],
+      "category": "database",
+      "tags": [
+        "data",
+        "database",
+        "persistence",
+        "storage"
+      ]
+    },
+    {
+      "canonical": "OWASP",
+      "aliases": [],
+      "category": "security",
+      "tags": [
+        "appsec",
+        "security"
+      ]
+    },
+    {
+      "canonical": "PACS",
+      "aliases": [
+        "radiology pacs"
+      ],
+      "category": "ehr",
+      "tags": [
+        "imaging",
+        "radiology"
+      ]
+    },
+    {
+      "canonical": "Pain Management",
+      "aliases": [],
+      "category": "clinical",
+      "tags": [
+        "analgesia"
+      ]
+    },
+    {
+      "canonical": "Palliative/Hospice",
+      "aliases": [
+        "hospice",
+        "palliative care"
+      ],
+      "category": "medical-specialty",
+      "tags": [
+        "palliative"
+      ]
+    },
+    {
+      "canonical": "PALS",
+      "aliases": [
+        "pediatric advanced life support"
+      ],
+      "category": "nursing",
+      "tags": [
+        "clinical",
+        "pediatrics",
+        "resuscitation"
+      ]
+    },
+    {
+      "canonical": "Pandas",
+      "aliases": [],
+      "category": "data",
+      "tags": [
+        "analytics",
+        "data",
+        "engineering"
+      ]
+    },
+    {
+      "canonical": "Pathophysiology",
+      "aliases": [],
+      "category": "clinical",
+      "tags": [
+        "knowledge"
+      ]
+    },
+    {
+      "canonical": "Patient Assessment",
+      "aliases": [],
+      "category": "nursing",
+      "tags": [
+        "clinical",
+        "nursing",
+        "patient-care"
+      ]
+    },
+    {
+      "canonical": "Patient Education",
+      "aliases": [],
+      "category": "nursing",
+      "tags": [
+        "education",
+        "patient-care"
+      ]
+    },
+    {
+      "canonical": "Pediatric ICU",
+      "aliases": [
+        "PICU"
+      ],
+      "category": "medical-specialty",
+      "tags": [
+        "icu",
+        "pediatrics"
+      ]
+    },
+    {
+      "canonical": "Pediatrics",
+      "aliases": [
+        "peds"
+      ],
+      "category": "medical-specialty",
+      "tags": [
+        "pediatrics"
+      ]
+    },
+    {
+      "canonical": "Penetration Testing",
+      "aliases": [
+        "pentest"
+      ],
+      "category": "security",
+      "tags": [
+        "appsec",
+        "security"
+      ]
+    },
+    {
+      "canonical": "Performance Marketing",
+      "aliases": [
+        "paid marketing"
+      ],
+      "category": "marketing",
+      "tags": [
+        "growth",
+        "marketing"
+      ]
+    },
+    {
+      "canonical": "pgvector",
+      "aliases": [
+        "pg vector"
+      ],
+      "category": "database",
+      "tags": [
+        "data",
+        "database",
+        "persistence",
+        "storage"
+      ]
+    },
+    {
+      "canonical": "Pharmacology",
+      "aliases": [],
+      "category": "clinical",
+      "tags": [
+        "knowledge",
+        "pharmacology"
+      ]
+    },
+    {
+      "canonical": "Phlebotomy",
+      "aliases": [],
+      "category": "nursing",
+      "tags": [
+        "clinical",
+        "lab",
+        "procedures"
+      ]
+    },
+    {
+      "canonical": "PHP",
+      "aliases": [],
+      "category": "language",
+      "tags": [
+        "programming-language"
+      ]
+    },
+    {
+      "canonical": "PICC Line Care",
+      "aliases": [
+        "PICC"
+      ],
+      "category": "clinical",
+      "tags": [
+        "iv-therapy",
+        "procedures"
+      ]
+    },
+    {
+      "canonical": "Playwright",
+      "aliases": [],
+      "category": "qa",
+      "tags": [
+        "automation",
+        "qa",
+        "testing"
+      ]
+    },
+    {
+      "canonical": "Podman",
+      "aliases": [],
+      "category": "devops",
+      "tags": [
+        "automation",
+        "devops",
+        "infrastructure",
+        "observability",
+        "platform"
+      ]
+    },
+    {
+      "canonical": "Polars",
+      "aliases": [],
+      "category": "data",
+      "tags": [
+        "analytics",
+        "data",
+        "engineering"
+      ]
+    },
+    {
+      "canonical": "PostgreSQL",
+      "aliases": [
+        "postgres",
+        "psql"
+      ],
+      "category": "database",
+      "tags": [
+        "data",
+        "database",
+        "persistence",
+        "storage"
+      ]
+    },
+    {
+      "canonical": "Postman",
+      "aliases": [],
+      "category": "qa",
+      "tags": [
+        "automation",
+        "qa",
+        "testing"
+      ]
+    },
+    {
+      "canonical": "Postpartum",
+      "aliases": [],
+      "category": "medical-specialty",
+      "tags": [
+        "maternity"
+      ]
+    },
+    {
+      "canonical": "Power BI",
+      "aliases": [
+        "powerbi"
+      ],
+      "category": "bi",
+      "tags": [
+        "analytics",
+        "bi",
+        "dashboards",
+        "data"
+      ]
+    },
+    {
+      "canonical": "Practice Fusion",
+      "aliases": [],
+      "category": "ehr",
+      "tags": [
+        "clinical-systems",
+        "ehr"
+      ]
+    },
+    {
+      "canonical": "Pressure Injury Prevention",
+      "aliases": [
+        "pressure ulcer prevention"
+      ],
+      "category": "nursing",
+      "tags": [
+        "safety"
+      ]
+    },
+    {
+      "canonical": "Prisma",
+      "aliases": [],
+      "category": "backend",
+      "tags": [
+        "apis",
+        "backend",
+        "server",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Procurement",
+      "aliases": [
+        "purchasing"
+      ],
+      "category": "ops",
+      "tags": [
+        "logistics",
+        "operations"
+      ]
+    },
+    {
+      "canonical": "Product Management",
+      "aliases": [
+        "pm",
+        "product manager"
+      ],
+      "category": "business",
+      "tags": [
+        "business",
+        "management",
+        "product"
+      ]
+    },
+    {
+      "canonical": "Project Management",
+      "aliases": [
+        "pmp",
+        "scrum master"
+      ],
+      "category": "business",
+      "tags": [
+        "business",
+        "management",
+        "product"
+      ]
+    },
+    {
+      "canonical": "Prometheus",
+      "aliases": [],
+      "category": "devops",
+      "tags": [
+        "automation",
+        "devops",
+        "infrastructure",
+        "observability",
+        "platform"
+      ]
+    },
+    {
+      "canonical": "Prototyping",
+      "aliases": [],
+      "category": "design",
+      "tags": [
+        "design",
+        "ui",
+        "ux"
+      ]
+    },
+    {
+      "canonical": "Psychiatry/Mental Health",
+      "aliases": [
+        "behavioral health",
+        "psych"
+      ],
+      "category": "medical-specialty",
+      "tags": [
+        "mental-health"
+      ]
+    },
+    {
+      "canonical": "Pulumi",
+      "aliases": [],
+      "category": "devops",
+      "tags": [
+        "automation",
+        "devops",
+        "infrastructure",
+        "observability",
+        "platform"
+      ]
+    },
+    {
+      "canonical": "PyTest",
+      "aliases": [
+        "pytest"
+      ],
+      "category": "qa",
+      "tags": [
+        "automation",
+        "qa",
+        "testing"
+      ]
+    },
+    {
+      "canonical": "Python",
+      "aliases": [
+        "py"
+      ],
+      "category": "language",
+      "tags": [
+        "programming-language"
+      ]
+    },
+    {
+      "canonical": "PyTorch",
+      "aliases": [],
+      "category": "ml",
+      "tags": [
+        "ai",
+        "data-science",
+        "ml"
+      ]
+    },
+    {
+      "canonical": "Qdrant",
+      "aliases": [],
+      "category": "mlops",
+      "tags": [
+        "ai",
+        "deployment",
+        "ml",
+        "mlops"
+      ]
+    },
+    {
+      "canonical": "Qt",
+      "aliases": [],
+      "category": "desktop",
+      "tags": [
+        "apps",
+        "desktop"
+      ]
+    },
+    {
+      "canonical": "QuickBooks",
+      "aliases": [],
+      "category": "finance",
+      "tags": [
+        "accounting",
+        "finance"
+      ]
+    },
+    {
+      "canonical": "RabbitMQ",
+      "aliases": [],
+      "category": "backend",
+      "tags": [
+        "apis",
+        "backend",
+        "server",
+        "web"
+      ]
+    },
+    {
+      "canonical": "RAG",
+      "aliases": [
+        "retrieval augmented generation",
+        "retrieval-augmented generation"
+      ],
+      "category": "mlops",
+      "tags": [
+        "ai",
+        "deployment",
+        "ml",
+        "mlops"
+      ]
+    },
+    {
+      "canonical": "Ray",
+      "aliases": [],
+      "category": "mlops",
+      "tags": [
+        "ai",
+        "deployment",
+        "ml",
+        "mlops"
+      ]
+    },
+    {
+      "canonical": "React",
+      "aliases": [
+        "react.js",
+        "reactjs"
+      ],
+      "category": "frontend",
+      "tags": [
+        "frontend",
+        "javascript-ecosystem",
+        "spa",
+        "ui",
+        "web"
+      ]
+    },
+    {
+      "canonical": "React Native",
+      "aliases": [],
+      "category": "mobile",
+      "tags": [
+        "apps",
+        "mobile"
+      ]
+    },
+    {
+      "canonical": "React Query",
+      "aliases": [
+        "tanstack query"
+      ],
+      "category": "frontend",
+      "tags": [
+        "frontend",
+        "javascript-ecosystem",
+        "spa",
+        "ui",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Recruiting",
+      "aliases": [
+        "talent acquisition"
+      ],
+      "category": "hr",
+      "tags": [
+        "hr",
+        "people-ops"
+      ]
+    },
+    {
+      "canonical": "Redis",
+      "aliases": [],
+      "category": "database",
+      "tags": [
+        "data",
+        "database",
+        "persistence",
+        "storage"
+      ]
+    },
+    {
+      "canonical": "Redis Streams",
+      "aliases": [
+        "redis stream"
+      ],
+      "category": "backend",
+      "tags": [
+        "apis",
+        "backend",
+        "server",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Redshift",
+      "aliases": [
+        "amazon redshift"
+      ],
+      "category": "database",
+      "tags": [
+        "data",
+        "database",
+        "persistence",
+        "storage"
+      ]
+    },
+    {
+      "canonical": "Redux",
+      "aliases": [],
+      "category": "frontend",
+      "tags": [
+        "frontend",
+        "javascript-ecosystem",
+        "spa",
+        "ui",
+        "web"
+      ]
+    },
+    {
+      "canonical": "REST",
+      "aliases": [
+        "rest api",
+        "restful apis"
+      ],
+      "category": "apis",
+      "tags": [
+        "api",
+        "integration",
+        "web"
+      ]
+    },
+    {
+      "canonical": "RIS",
+      "aliases": [
+        "radiology information system"
+      ],
+      "category": "ehr",
+      "tags": [
+        "imaging",
+        "radiology"
+      ]
+    },
+    {
+      "canonical": "Roadmapping",
+      "aliases": [],
+      "category": "business",
+      "tags": [
+        "business",
+        "management",
+        "product"
+      ]
+    },
+    {
+      "canonical": "Ruby on Rails",
+      "aliases": [
+        "rails"
+      ],
+      "category": "backend",
+      "tags": [
+        "apis",
+        "backend",
+        "server",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Rust",
+      "aliases": [],
+      "category": "language",
+      "tags": [
+        "programming-language"
+      ]
+    },
+    {
+      "canonical": "Salesforce",
+      "aliases": [
+        "sfdc"
+      ],
+      "category": "sales",
+      "tags": [
+        "crm",
+        "sales"
+      ]
+    },
+    {
+      "canonical": "SAP",
+      "aliases": [
+        "sap erp",
+        "sap fico"
+      ],
+      "category": "finance",
+      "tags": [
+        "accounting",
+        "finance"
+      ]
+    },
+    {
+      "canonical": "Sass",
+      "aliases": [
+        "scss"
+      ],
+      "category": "frontend",
+      "tags": [
+        "frontend",
+        "javascript-ecosystem",
+        "spa",
+        "ui",
+        "web"
+      ]
+    },
+    {
+      "canonical": "SAST",
+      "aliases": [
+        "static application security testing"
+      ],
+      "category": "security",
+      "tags": [
+        "appsec",
+        "security"
+      ]
+    },
+    {
+      "canonical": "SBAR Communication",
+      "aliases": [
+        "SBAR"
+      ],
+      "category": "nursing",
+      "tags": [
+        "communication",
+        "handoff"
+      ]
+    },
+    {
+      "canonical": "scikit-learn",
+      "aliases": [
+        "sklearn"
+      ],
+      "category": "ml",
+      "tags": [
+        "ai",
+        "data-science",
+        "ml"
+      ]
+    },
+    {
+      "canonical": "Selenium",
+      "aliases": [],
+      "category": "qa",
+      "tags": [
+        "automation",
+        "qa",
+        "testing"
+      ]
+    },
+    {
+      "canonical": "SEO",
+      "aliases": [
+        "search engine optimization"
+      ],
+      "category": "marketing",
+      "tags": [
+        "growth",
+        "marketing"
+      ]
+    },
+    {
+      "canonical": "Sepsis Protocols",
+      "aliases": [],
+      "category": "clinical",
+      "tags": [
+        "critical-care"
+      ]
+    },
+    {
+      "canonical": "Sequelize",
+      "aliases": [],
+      "category": "backend",
+      "tags": [
+        "apis",
+        "backend",
+        "server",
+        "web"
+      ]
+    },
+    {
+      "canonical": "SIEM",
+      "aliases": [
+        "security information and event management",
+        "splunk"
+      ],
+      "category": "security",
+      "tags": [
+        "appsec",
+        "security"
+      ]
+    },
+    {
+      "canonical": "Sketch",
+      "aliases": [],
+      "category": "design",
+      "tags": [
+        "design",
+        "ui",
+        "ux"
+      ]
+    },
+    {
+      "canonical": "SNOMED CT",
+      "aliases": [
+        "snomed"
+      ],
+      "category": "medical-standards",
+      "tags": [
+        "terminology"
+      ]
+    },
+    {
+      "canonical": "Snowflake",
+      "aliases": [],
+      "category": "database",
+      "tags": [
+        "data",
+        "database",
+        "persistence",
+        "storage"
+      ]
+    },
+    {
+      "canonical": "SOAP",
+      "aliases": [],
+      "category": "apis",
+      "tags": [
+        "api",
+        "integration",
+        "web"
+      ]
+    },
+    {
+      "canonical": "SOC",
+      "aliases": [
+        "security operations center"
+      ],
+      "category": "security",
+      "tags": [
+        "appsec",
+        "security"
+      ]
+    },
+    {
+      "canonical": "Spring Boot",
+      "aliases": [
+        "java + spring",
+        "java spring",
+        "spring",
+        "springboot"
+      ],
+      "category": "backend",
+      "tags": [
+        "apis",
+        "backend",
+        "server",
+        "web"
+      ]
+    },
+    {
+      "canonical": "SQL",
+      "aliases": [],
+      "category": "data",
+      "tags": [
+        "analytics",
+        "data",
+        "engineering"
+      ]
+    },
+    {
+      "canonical": "SQLite",
+      "aliases": [],
+      "category": "database",
+      "tags": [
+        "data",
+        "database",
+        "persistence",
+        "storage"
+      ]
+    },
+    {
+      "canonical": "Storybook",
+      "aliases": [],
+      "category": "frontend",
+      "tags": [
+        "frontend",
+        "javascript-ecosystem",
+        "spa",
+        "ui",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Styled Components",
+      "aliases": [
+        "styled-components"
+      ],
+      "category": "frontend",
+      "tags": [
+        "frontend",
+        "javascript-ecosystem",
+        "spa",
+        "ui",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Supabase",
+      "aliases": [],
+      "category": "database",
+      "tags": [
+        "data",
+        "database",
+        "persistence",
+        "storage"
+      ]
+    },
+    {
+      "canonical": "Superset",
+      "aliases": [
+        "apache superset"
+      ],
+      "category": "bi",
+      "tags": [
+        "analytics",
+        "bi",
+        "dashboards",
+        "data"
+      ]
+    },
+    {
+      "canonical": "Supply Chain",
+      "aliases": [
+        "scm",
+        "supply chain management"
+      ],
+      "category": "ops",
+      "tags": [
+        "logistics",
+        "operations"
+      ]
+    },
+    {
+      "canonical": "Svelte",
+      "aliases": [],
+      "category": "frontend",
+      "tags": [
+        "frontend",
+        "javascript-ecosystem",
+        "spa",
+        "ui",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Swagger",
+      "aliases": [
+        "open api",
+        "openapi",
+        "swagger ui"
+      ],
+      "category": "apis",
+      "tags": [
+        "api",
+        "integration",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Swift",
+      "aliases": [],
+      "category": "mobile",
+      "tags": [
+        "apps",
+        "mobile"
+      ]
+    },
+    {
+      "canonical": "Tableau",
+      "aliases": [],
+      "category": "bi",
+      "tags": [
+        "analytics",
+        "bi",
+        "dashboards",
+        "data"
+      ]
+    },
+    {
+      "canonical": "Tailwind CSS",
+      "aliases": [
+        "tailwind"
+      ],
+      "category": "frontend",
+      "tags": [
+        "frontend",
+        "javascript-ecosystem",
+        "spa",
+        "ui",
+        "web"
+      ]
+    },
+    {
+      "canonical": "TanStack Table",
+      "aliases": [
+        "react table",
+        "tanstack table"
+      ],
+      "category": "frontend",
+      "tags": [
+        "frontend",
+        "javascript-ecosystem",
+        "spa",
+        "ui",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Tauri",
+      "aliases": [],
+      "category": "desktop",
+      "tags": [
+        "apps",
+        "desktop"
+      ]
+    },
+    {
+      "canonical": "Telehealth Platforms",
+      "aliases": [
+        "telemedicine"
+      ],
+      "category": "telehealth",
+      "tags": [
+        "telehealth"
+      ]
+    },
+    {
+      "canonical": "Telemetry Monitoring",
+      "aliases": [],
+      "category": "clinical",
+      "tags": [
+        "cardiology",
+        "monitoring"
+      ]
+    },
+    {
+      "canonical": "TensorFlow",
+      "aliases": [
+        "tf"
+      ],
+      "category": "ml",
+      "tags": [
+        "ai",
+        "data-science",
+        "ml"
+      ]
+    },
+    {
+      "canonical": "Terraform",
+      "aliases": [],
+      "category": "devops",
+      "tags": [
+        "automation",
+        "devops",
+        "infrastructure",
+        "observability",
+        "platform"
+      ]
+    },
+    {
+      "canonical": "Test Automation",
+      "aliases": [
+        "automation testing"
+      ],
+      "category": "qa",
+      "tags": [
+        "automation",
+        "qa",
+        "testing"
+      ]
+    },
+    {
+      "canonical": "TorchServe",
+      "aliases": [],
+      "category": "mlops",
+      "tags": [
+        "ai",
+        "deployment",
+        "ml",
+        "mlops"
+      ]
+    },
+    {
+      "canonical": "Tracheostomy Care",
+      "aliases": [],
+      "category": "clinical",
+      "tags": [
+        "procedures",
+        "respiratory"
+      ]
+    },
+    {
+      "canonical": "Traefik",
+      "aliases": [],
+      "category": "devops",
+      "tags": [
+        "automation",
+        "devops",
+        "infrastructure",
+        "observability",
+        "platform"
+      ]
+    },
+    {
+      "canonical": "Transformers",
+      "aliases": [
+        "hf transformers"
+      ],
+      "category": "mlops",
+      "tags": [
+        "ai",
+        "deployment",
+        "ml",
+        "mlops"
+      ]
+    },
+    {
+      "canonical": "Triage",
+      "aliases": [],
+      "category": "nursing",
+      "tags": [
+        "ed",
+        "emergency"
+      ]
+    },
+    {
+      "canonical": "tRPC",
+      "aliases": [
+        "trpc"
+      ],
+      "category": "backend",
+      "tags": [
+        "apis",
+        "backend",
+        "server",
+        "web"
+      ]
+    },
+    {
+      "canonical": "TypeORM",
+      "aliases": [],
+      "category": "backend",
+      "tags": [
+        "apis",
+        "backend",
+        "server",
+        "web"
+      ]
+    },
+    {
+      "canonical": "TypeScript",
+      "aliases": [
+        "ts"
+      ],
+      "category": "language",
+      "tags": [
+        "programming-language"
+      ]
+    },
+    {
+      "canonical": "UI/UX",
+      "aliases": [
+        "ui ux",
+        "ux/ui"
+      ],
+      "category": "design",
+      "tags": [
+        "design",
+        "ui",
+        "ux"
+      ]
+    },
+    {
+      "canonical": "Unity",
+      "aliases": [],
+      "category": "gamedev",
+      "tags": [
+        "3d",
+        "gamedev",
+        "realtime"
+      ]
+    },
+    {
+      "canonical": "Unreal Engine",
+      "aliases": [
+        "ue",
+        "ue5"
+      ],
+      "category": "gamedev",
+      "tags": [
+        "3d",
+        "gamedev",
+        "realtime"
+      ]
+    },
+    {
+      "canonical": "Vector Databases",
+      "aliases": [
+        "faiss",
+        "milvus",
+        "pinecone",
+        "qdrant",
+        "weaviate"
+      ],
+      "category": "mlops",
+      "tags": [
+        "ai",
+        "deployment",
+        "ml",
+        "mlops"
+      ]
+    },
+    {
+      "canonical": "Ventilator",
+      "aliases": [],
+      "category": "medical-devices",
+      "tags": [
+        "devices",
+        "icu",
+        "respiratory"
+      ]
+    },
+    {
+      "canonical": "Ventilator Management",
+      "aliases": [
+        "mechanical ventilation"
+      ],
+      "category": "clinical",
+      "tags": [
+        "icu",
+        "respiratory"
+      ]
+    },
+    {
+      "canonical": "Vercel",
+      "aliases": [],
+      "category": "frontend",
+      "tags": [
+        "frontend",
+        "javascript-ecosystem",
+        "spa",
+        "ui",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Vital Signs Monitoring",
+      "aliases": [
+        "vitals"
+      ],
+      "category": "nursing",
+      "tags": [
+        "clinical",
+        "nursing"
+      ]
+    },
+    {
+      "canonical": "Vite",
+      "aliases": [],
+      "category": "frontend",
+      "tags": [
+        "frontend",
+        "javascript-ecosystem",
+        "spa",
+        "ui",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Vue.js",
+      "aliases": [
+        "vue",
+        "vuejs"
+      ],
+      "category": "frontend",
+      "tags": [
+        "frontend",
+        "javascript-ecosystem",
+        "spa",
+        "ui",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Weaviate",
+      "aliases": [],
+      "category": "mlops",
+      "tags": [
+        "ai",
+        "deployment",
+        "ml",
+        "mlops"
+      ]
+    },
+    {
+      "canonical": "Webpack",
+      "aliases": [],
+      "category": "frontend",
+      "tags": [
+        "frontend",
+        "javascript-ecosystem",
+        "spa",
+        "ui",
+        "web"
+      ]
+    },
+    {
+      "canonical": "WebSockets",
+      "aliases": [
+        "websocket"
+      ],
+      "category": "apis",
+      "tags": [
+        "api",
+        "integration",
+        "web"
+      ]
+    },
+    {
+      "canonical": "Weights & Biases",
+      "aliases": [
+        "wandb"
+      ],
+      "category": "mlops",
+      "tags": [
+        "ai",
+        "deployment",
+        "ml",
+        "mlops"
+      ]
+    },
+    {
+      "canonical": "Wound Care",
+      "aliases": [],
+      "category": "nursing",
+      "tags": [
+        "clinical",
+        "procedures"
+      ]
+    },
+    {
+      "canonical": "WPF",
+      "aliases": [],
+      "category": "desktop",
+      "tags": [
+        "apps",
+        "desktop"
+      ]
+    },
+    {
+      "canonical": "XGBoost",
+      "aliases": [],
+      "category": "ml",
+      "tags": [
+        "ai",
+        "data-science",
+        "ml"
+      ]
+    },
+    {
+      "canonical": "Zendesk",
+      "aliases": [],
+      "category": "support",
+      "tags": [
+        "customer",
+        "support"
+      ]
+    },
+    {
+      "canonical": "Zustand",
+      "aliases": [],
+      "category": "frontend",
+      "tags": [
+        "frontend",
+        "javascript-ecosystem",
+        "spa",
+        "ui",
+        "web"
+      ]
+    }
   ],
   "families": {
-    "backend":   ["Node.js","Express","NestJS","Django","Flask","FastAPI","Spring Boot",".NET","Laravel","Ruby on Rails","Go"],
-    "back end":  ["Node.js","Express","NestJS","Django","Flask","FastAPI","Spring Boot",".NET","Laravel","Ruby on Rails","Go"],
-    "server-side":["Node.js","Express","Django","Flask","FastAPI","Spring Boot",".NET","Laravel","Ruby on Rails","Go"],
-
-    "frontend":  ["React","Next.js","Vue.js","Nuxt.js","Angular","Svelte","TypeScript","JavaScript","Redux","Tailwind CSS"],
-    "front end": ["React","Next.js","Vue.js","Nuxt.js","Angular","Svelte","TypeScript","JavaScript","Redux","Tailwind CSS"],
-    "fullstack": ["React","Node.js","Express","PostgreSQL"],
-    "full stack":["React","Node.js","Express","PostgreSQL"],
-
-    "api":       ["REST","GraphQL","gRPC","WebSockets"],
-    "database":  ["PostgreSQL","MySQL","SQLite","Microsoft SQL Server","MongoDB","Redis","Elasticsearch","Cassandra","DynamoDB","Neo4j"],
-    "databases": ["PostgreSQL","MySQL","SQLite","Microsoft SQL Server","MongoDB","Redis","Elasticsearch","Cassandra","DynamoDB","Neo4j"],
-
-    "devops":    ["Docker","Kubernetes","CI/CD","Terraform","Ansible","GitHub Actions","Jenkins","Linux","Nginx","Apache"],
-    "cloud":     ["AWS","Azure","GCP"],
-
-    "data":      ["SQL","Pandas","NumPy","Apache Spark","Kafka","dbt","Airflow"],
-    "ml":        ["scikit-learn","TensorFlow","PyTorch","XGBoost","LightGBM","NLP","Computer Vision"],
-    "mlops":     ["MLOps","LangChain","Vector Databases"],
-
-    "mobile":    ["React Native","Flutter","Android","iOS"],
-    "desktop":   ["Electron","WPF","Qt"],
-
-    "security":  ["OWASP","Penetration Testing","SIEM","IAM","SOC"],
-    "qa":        ["Selenium","Cypress","Playwright","JUnit","PyTest","Test Automation"],
-
-    "business":  ["Product Management","Project Management","Agile","Business Analysis","OKRs","Roadmapping"],
-    "marketing": ["SEO","Content Marketing","Performance Marketing","Google Ads","Facebook Ads","Email Marketing","HubSpot","Salesforce","CRM"],
-    "design":    ["Figma","Sketch","Adobe XD","UI/UX","Prototyping"],
-    "bi":        ["Power BI","Tableau","Looker"],
-
-    "finance":   ["Financial Modeling","FP&A","Accounting","QuickBooks","SAP"],
-    "hr":        ["Recruiting","Onboarding","HRIS"],
-    "ops":       ["Operations Management","Supply Chain","Logistics","Procurement"],
-    "support":   ["Customer Support","Zendesk","Intercom"],
-    "healthcare":["Healthcare Analytics","HL7","FHIR"],
-    "education": ["Instructional Design","LMS"],
-    "legal":     ["Contract Review","Compliance"],
-    "gamedev":   ["Unity","Unreal Engine","Cocos2d"],
-    
-    
-    "ai":        ["Artificial Intelligence", "Machine Learning", "LLMs", "Generative AI", "RAG", "LangChain", "Vector Databases", "Hugging Face", "OpenAI API", "TensorFlow", "PyTorch", "scikit-learn", "NLP", "Computer Vision", "MLOps"],
-    "artificial intelligence": ["Artificial Intelligence", "Machine Learning", "LLMs", "Generative AI", "RAG", "LangChain", "Vector Databases", "Hugging Face", "OpenAI API", "TensorFlow", "PyTorch", "scikit-learn", "NLP", "Computer Vision", "MLOps"],
-    "gen ai":   ["Generative AI", "LLMs", "RAG", "LangChain", "Vector Databases", "Hugging Face", "OpenAI API", "MLOps"],
-    "genai":    ["Generative AI", "LLMs", "RAG", "LangChain", "Vector Databases", "Hugging Face", "OpenAI API", "MLOps"],
-    "generative ai": ["Generative AI", "LLMs", "RAG", "LangChain", "Vector Databases", "Hugging Face", "OpenAI API", "MLOps"],
-    "llm":      ["LLMs", "Generative AI", "RAG", "LangChain", "Vector Databases", "Hugging Face", "OpenAI API", "MLOps"],
-    "large language models": ["LLMs", "Generative AI", "RAG", "LangChain", "Vector Databases", "Hugging Face", "OpenAI API", "MLOps"],
-    "rag":      ["RAG", "LLMs", "LangChain", "Vector Databases", "Hugging Face", "OpenAI API", "MLOps"]
-
+    "backend": [
+      "Node.js",
+      "Express",
+      "NestJS",
+      "Django",
+      "Flask",
+      "FastAPI",
+      "Spring Boot",
+      ".NET",
+      "Laravel",
+      "Ruby on Rails",
+      "Go",
+      "Prisma",
+      "TypeORM",
+      "Sequelize",
+      "tRPC",
+      "BullMQ",
+      "RabbitMQ",
+      "Redis Streams",
+      "Swagger"
+    ],
+    "back end": [
+      "Node.js",
+      "Express",
+      "NestJS",
+      "Django",
+      "Flask",
+      "FastAPI",
+      "Spring Boot",
+      ".NET",
+      "Laravel",
+      "Ruby on Rails",
+      "Go"
+    ],
+    "server-side": [
+      "Node.js",
+      "Express",
+      "Django",
+      "Flask",
+      "FastAPI",
+      "Spring Boot",
+      ".NET",
+      "Laravel",
+      "Ruby on Rails",
+      "Go"
+    ],
+    "frontend": [
+      "React",
+      "Next.js",
+      "Vue.js",
+      "Nuxt.js",
+      "Angular",
+      "Svelte",
+      "TypeScript",
+      "JavaScript",
+      "Redux",
+      "Tailwind CSS",
+      "Zustand",
+      "React Query",
+      "TanStack Table",
+      "Styled Components",
+      "Emotion",
+      "Sass",
+      "Storybook",
+      "Framer Motion",
+      "NextAuth.js",
+      "Vercel"
+    ],
+    "front end": [
+      "React",
+      "Next.js",
+      "Vue.js",
+      "Nuxt.js",
+      "Angular",
+      "Svelte",
+      "TypeScript",
+      "JavaScript",
+      "Redux",
+      "Tailwind CSS"
+    ],
+    "fullstack": [
+      "React",
+      "Node.js",
+      "Express",
+      "PostgreSQL"
+    ],
+    "full stack": [
+      "React",
+      "Node.js",
+      "Express",
+      "PostgreSQL"
+    ],
+    "api": [
+      "REST",
+      "GraphQL",
+      "gRPC",
+      "WebSockets",
+      "Swagger",
+      "SOAP"
+    ],
+    "database": [
+      "PostgreSQL",
+      "MySQL",
+      "SQLite",
+      "Microsoft SQL Server",
+      "MongoDB",
+      "Redis",
+      "Elasticsearch",
+      "Cassandra",
+      "DynamoDB",
+      "Neo4j",
+      "MariaDB",
+      "Oracle",
+      "Snowflake",
+      "BigQuery",
+      "Redshift",
+      "DuckDB",
+      "Firebase Firestore",
+      "Supabase",
+      "pgvector"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "MySQL",
+      "SQLite",
+      "Microsoft SQL Server",
+      "MongoDB",
+      "Redis",
+      "Elasticsearch",
+      "Cassandra",
+      "DynamoDB",
+      "Neo4j"
+    ],
+    "devops": [
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "Terraform",
+      "Ansible",
+      "GitHub Actions",
+      "Jenkins",
+      "Linux",
+      "Nginx",
+      "Apache",
+      "Helm",
+      "Argo CD",
+      "Prometheus",
+      "Grafana",
+      "ELK",
+      "EFK",
+      "Pulumi",
+      "GitLab CI",
+      "CircleCI",
+      "Podman",
+      "Traefik"
+    ],
+    "cloud": [
+      "AWS",
+      "Azure",
+      "GCP",
+      "Cloudflare",
+      "Netlify",
+      "Fly.io"
+    ],
+    "data": [
+      "SQL",
+      "Pandas",
+      "NumPy",
+      "Apache Spark",
+      "Kafka",
+      "dbt",
+      "Airflow",
+      "Polars",
+      "Dask",
+      "Apache Flink",
+      "Apache Beam",
+      "Great Expectations"
+    ],
+    "ml": [
+      "scikit-learn",
+      "TensorFlow",
+      "PyTorch",
+      "XGBoost",
+      "LightGBM",
+      "NLP",
+      "Computer Vision"
+    ],
+    "mlops": [
+      "MLOps",
+      "LangChain",
+      "Vector Databases",
+      "MLflow",
+      "Weights & Biases",
+      "Ray",
+      "BentoML",
+      "LlamaIndex",
+      "LangGraph",
+      "Transformers",
+      "ONNX",
+      "OpenVINO",
+      "TorchServe",
+      "Chroma",
+      "Weaviate",
+      "Qdrant"
+    ],
+    "mobile": [
+      "React Native",
+      "Flutter",
+      "Android",
+      "iOS",
+      "Swift",
+      "Kotlin"
+    ],
+    "desktop": [
+      "Electron",
+      "WPF",
+      "Qt",
+      "Tauri"
+    ],
+    "security": [
+      "OWASP",
+      "Penetration Testing",
+      "SIEM",
+      "IAM",
+      "SOC",
+      "Burp Suite",
+      "SAST",
+      "DAST",
+      "OAuth 2.0",
+      "OIDC",
+      "JWT",
+      "Keycloak"
+    ],
+    "qa": [
+      "Selenium",
+      "Cypress",
+      "Playwright",
+      "JUnit",
+      "PyTest",
+      "Test Automation"
+    ],
+    "business": [
+      "Product Management",
+      "Project Management",
+      "Agile",
+      "Business Analysis",
+      "OKRs",
+      "Roadmapping"
+    ],
+    "marketing": [
+      "SEO",
+      "Content Marketing",
+      "Performance Marketing",
+      "Google Ads",
+      "Facebook Ads",
+      "Email Marketing",
+      "HubSpot",
+      "Salesforce",
+      "CRM"
+    ],
+    "design": [
+      "Figma",
+      "Sketch",
+      "Adobe XD",
+      "UI/UX",
+      "Prototyping"
+    ],
+    "bi": [
+      "Power BI",
+      "Tableau",
+      "Looker",
+      "Superset",
+      "Metabase"
+    ],
+    "finance": [
+      "Financial Modeling",
+      "FP&A",
+      "Accounting",
+      "QuickBooks",
+      "SAP"
+    ],
+    "hr": [
+      "Recruiting",
+      "Onboarding",
+      "HRIS"
+    ],
+    "ops": [
+      "Operations Management",
+      "Supply Chain",
+      "Logistics",
+      "Procurement"
+    ],
+    "support": [
+      "Customer Support",
+      "Zendesk",
+      "Intercom"
+    ],
+    "healthcare": [
+      "Healthcare Analytics",
+      "HL7",
+      "FHIR"
+    ],
+    "education": [
+      "Instructional Design",
+      "LMS"
+    ],
+    "legal": [
+      "Contract Review",
+      "Compliance"
+    ],
+    "gamedev": [
+      "Unity",
+      "Unreal Engine",
+      "Cocos2d"
+    ],
+    "ai": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "LLMs",
+      "Generative AI",
+      "RAG",
+      "LangChain",
+      "Vector Databases",
+      "Hugging Face",
+      "OpenAI API",
+      "TensorFlow",
+      "PyTorch",
+      "scikit-learn",
+      "NLP",
+      "Computer Vision",
+      "MLOps"
+    ],
+    "artificial intelligence": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "LLMs",
+      "Generative AI",
+      "RAG",
+      "LangChain",
+      "Vector Databases",
+      "Hugging Face",
+      "OpenAI API",
+      "TensorFlow",
+      "PyTorch",
+      "scikit-learn",
+      "NLP",
+      "Computer Vision",
+      "MLOps"
+    ],
+    "gen ai": [
+      "Generative AI",
+      "LLMs",
+      "RAG",
+      "LangChain",
+      "Vector Databases",
+      "Hugging Face",
+      "OpenAI API",
+      "MLOps"
+    ],
+    "genai": [
+      "Generative AI",
+      "LLMs",
+      "RAG",
+      "LangChain",
+      "Vector Databases",
+      "Hugging Face",
+      "OpenAI API",
+      "MLOps"
+    ],
+    "generative ai": [
+      "Generative AI",
+      "LLMs",
+      "RAG",
+      "LangChain",
+      "Vector Databases",
+      "Hugging Face",
+      "OpenAI API",
+      "MLOps"
+    ],
+    "llm": [
+      "LLMs",
+      "Generative AI",
+      "RAG",
+      "LangChain",
+      "Vector Databases",
+      "Hugging Face",
+      "OpenAI API",
+      "MLOps"
+    ],
+    "large language models": [
+      "LLMs",
+      "Generative AI",
+      "RAG",
+      "LangChain",
+      "Vector Databases",
+      "Hugging Face",
+      "OpenAI API",
+      "MLOps"
+    ],
+    "rag": [
+      "RAG",
+      "LLMs",
+      "LangChain",
+      "Vector Databases",
+      "Hugging Face",
+      "OpenAI API",
+      "MLOps"
+    ],
+    "search": [
+      "OpenSearch",
+      "Meilisearch"
+    ],
+    "observability": [
+      "Prometheus",
+      "Grafana",
+      "ELK",
+      "EFK"
+    ],
+    "realtime": [
+      "WebSockets",
+      "gRPC",
+      "Redis Streams",
+      "RabbitMQ"
+    ],
+    "vector": [
+      "Vector Databases",
+      "Chroma",
+      "Weaviate",
+      "Qdrant",
+      "pgvector"
+    ],
+    "nursing": [
+      "Patient Assessment",
+      "Vital Signs Monitoring",
+      "Medication Administration",
+      "Medication Reconciliation",
+      "IV Therapy",
+      "Phlebotomy",
+      "Wound Care",
+      "Catheterization",
+      "Blood Transfusion",
+      "Insulin Administration",
+      "Heparin Protocols",
+      "Aseptic Technique",
+      "Infection Control",
+      "Isolation Precautions",
+      "CPR/BLS",
+      "ACLS",
+      "PALS",
+      "NRP",
+      "EKG Interpretation",
+      "Telemetry Monitoring",
+      "Airway Management",
+      "Ventilator Management",
+      "Tracheostomy Care",
+      "NG Tube Insertion",
+      "Central Line Care",
+      "PICC Line Care",
+      "Chest Tube Management",
+      "Triage",
+      "Care Planning",
+      "SBAR Communication",
+      "Care Planning",
+      "SBAR Communication"
+    ],
+    "clinical": [
+      "Patient Assessment",
+      "Vital Signs Monitoring",
+      "Medication Administration",
+      "Medication Reconciliation",
+      "IV Therapy",
+      "Phlebotomy",
+      "Wound Care",
+      "Catheterization",
+      "Blood Transfusion",
+      "Insulin Administration",
+      "Heparin Protocols",
+      "Aseptic Technique",
+      "Infection Control",
+      "Isolation Precautions",
+      "CPR/BLS",
+      "ACLS",
+      "PALS",
+      "NRP",
+      "EKG Interpretation",
+      "Telemetry Monitoring",
+      "Airway Management",
+      "Ventilator Management",
+      "Tracheostomy Care",
+      "NG Tube Insertion",
+      "Central Line Care",
+      "PICC Line Care",
+      "Chest Tube Management",
+      "Triage",
+      "Care Planning",
+      "SBAR Communication",
+      "Infusion Pump",
+      "Defibrillator/AED",
+      "Glucometer",
+      "ECG Machine",
+      "Ventilator",
+      "CPAP/BiPAP",
+      "Pathophysiology",
+      "Pharmacology",
+      "Evidence-Based Practice",
+      "Patient Education",
+      "Cultural Competence",
+      "Pain Management",
+      "Sepsis Protocols",
+      "Falls Prevention",
+      "Pressure Injury Prevention"
+    ],
+    "ehr": [
+      "Epic",
+      "Cerner",
+      "MEDITECH",
+      "Allscripts",
+      "Athenahealth",
+      "eClinicalWorks",
+      "Practice Fusion",
+      "PACS",
+      "LIS",
+      "RIS",
+      "Telehealth Platforms",
+      "HL7",
+      "FHIR"
+    ],
+    "medical-standards": [
+      "ICD-10",
+      "CPT",
+      "SNOMED CT",
+      "LOINC",
+      "DICOM",
+      "HIPAA",
+      "HL7",
+      "FHIR"
+    ],
+    "medical-devices": [
+      "Infusion Pump",
+      "Defibrillator/AED",
+      "Glucometer",
+      "ECG Machine",
+      "Ventilator",
+      "CPAP/BiPAP"
+    ],
+    "medical-specialty": [
+      "ICU/Critical Care",
+      "Emergency Department",
+      "Operating Room",
+      "Med-Surg",
+      "Pediatrics",
+      "Neonatal ICU",
+      "Pediatric ICU",
+      "Labor & Delivery",
+      "Postpartum",
+      "Oncology",
+      "Dialysis",
+      "Cardiology",
+      "Psychiatry/Mental Health",
+      "Home Health",
+      "Long-Term Care",
+      "Geriatrics",
+      "Palliative/Hospice"
+    ],
+    "telehealth": [
+      "Telehealth Platforms"
+    ]
+  },
+  "taxonomy": {
+    "tags_info": {
+      "web": "General web technologies (front/back, APIs)",
+      "javascript-ecosystem": "JS/TS libraries and tools",
+      "ui": "User interface tooling",
+      "spa": "Single Page Applications",
+      "server": "Server-side technologies",
+      "apis": "API protocols, description, integration",
+      "data": "Data processing & engineering",
+      "database": "Datastores, SQL/NoSQL, warehousing",
+      "storage": "Persistence & storage tech",
+      "search": "Search engines & indexes",
+      "indexing": "Indexing systems",
+      "cloud": "Public cloud platforms",
+      "infrastructure": "Infra-as-code, provisioning, runtime",
+      "devops": "Automation, CI/CD, release engineering",
+      "platform": "Platform engineering & SRE",
+      "observability": "Monitoring, logging, tracing",
+      "analytics": "BI, reporting, dashboards",
+      "engineering": "Data engineering workloads",
+      "ai": "Artificial intelligence umbrella",
+      "ml": "Machine learning frameworks & libraries",
+      "mlops": "Production ML tooling, deployment",
+      "deployment": "Runtime & serving ML models",
+      "bi": "Business intelligence tools",
+      "dashboards": "Dashboarding tools",
+      "mobile": "Mobile app development",
+      "apps": "Application platforms",
+      "desktop": "Desktop app development",
+      "security": "Security tools & practices",
+      "appsec": "Application security",
+      "qa": "Quality assurance",
+      "testing": "Testing frameworks & tools",
+      "automation": "Automation in build/test/deploy",
+      "business": "Business & product practices",
+      "product": "Product management practices",
+      "management": "Management methodologies",
+      "marketing": "Marketing technologies",
+      "growth": "Growth & performance marketing",
+      "sales": "Sales tooling",
+      "crm": "Customer relationship management",
+      "design": "Design & prototyping",
+      "ux": "User experience",
+      "finance": "Finance & accounting",
+      "accounting": "Accounting tools & practices",
+      "hr": "Human resources",
+      "people-ops": "People operations",
+      "operations": "Operations management",
+      "logistics": "Logistics & supply chain",
+      "support": "Customer support",
+      "customer": "Customer success",
+      "healthcare": "Healthcare domain",
+      "education": "Education domain",
+      "legal": "Legal domain",
+      "compliance": "Regulatory & compliance",
+      "gamedev": "Game development",
+      "3d": "3D engines & tooling",
+      "realtime": "Realtime systems"
+    }
   }
 }

@@ -6,6 +6,7 @@ import SaveRoundedIcon from "@mui/icons-material/SaveRounded";
 import SmartToyRoundedIcon from "@mui/icons-material/SmartToyRounded";
 import BoltRoundedIcon from "@mui/icons-material/BoltRounded";
 import PictureAsPdfRoundedIcon from "@mui/icons-material/PictureAsPdfRounded";
+import { getToken } from "../api"; // ✅ نستخدمه لتحديد حالة الدخول
 
 export default function ActionsBar({
   activeStep,
@@ -21,6 +22,9 @@ export default function ActionsBar({
 }) {
   const isLast = activeStep === 3;
   const disabledAll = uploading || analyzing || generating;
+
+  // ✅ هل المستخدم عامل تسجيل دخول؟
+  const authed = !!getToken();
 
   return (
     <Stack spacing={2} sx={{ mt: 3 }}>
@@ -46,17 +50,23 @@ export default function ActionsBar({
         </Button>
 
         {isLast ? (
-          <Button
-            type="button"
-            variant="contained"
-            color="primary"
-            endIcon={<SaveRoundedIcon />}
-            onClick={onSave}
-            disabled={disabledAll}
-            sx={{ borderRadius: 2, minWidth: 140 }}
-          >
-            Save CV
-          </Button>
+          // ✅ زر الحفظ يتعطّل إذا المستخدم غير مسجّل، مع Tooltip توضيحي
+          <Tooltip title={authed ? "" : "Sign in to save your CV"} placement="top">
+            {/* ملاحظة: span ضرورية لأن Tooltip ما يشتغل مباشرة على عناصر disabled */}
+            <span>
+              <Button
+                type="button"
+                variant="contained"
+                color="primary"
+                endIcon={<SaveRoundedIcon />}
+                onClick={onSave}
+                disabled={disabledAll || !authed}
+                sx={{ borderRadius: 2, minWidth: 140 }}
+              >
+                Save CV
+              </Button>
+            </span>
+          </Tooltip>
         ) : (
           <Button
             type="button"
@@ -136,7 +146,7 @@ export default function ActionsBar({
             </Tooltip>
           </ButtonGroup>
 
-          {/* زر تحميل PDF — بنفس أسلوب التحميل */}
+          {/* زر تحميل PDF */}
           <Button
             type="button"
             variant="outlined"

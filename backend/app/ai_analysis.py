@@ -1,6 +1,5 @@
 # app/ai_analysis.py
 from fastapi import APIRouter
-from app.main import CVIn
 from .schemas import CVIn
 from .skill_normalize import SkillNormalizer
 

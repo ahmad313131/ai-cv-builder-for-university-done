@@ -1,5 +1,6 @@
 # app/skill_normalize.py
 import json, re
+from collections import defaultdict
 import numpy as np
 from sentence_transformers import SentenceTransformer, util
 
@@ -20,13 +21,21 @@ class SkillNormalizer:
         self.family_keywords = { (k or "").lower(): set(v) for k, v in data.get("families", {}).items() }
 
         # canonical -> category
-        self.cats = {}
-        # all surface forms (canonical + aliases)
+        self.cats: dict[str, str] = {}
+        # category -> set(canonical)
+        self.by_cat: dict[str, set[str]] = defaultdict(set)
+        # all canonical skills
+        self.all_canon: set[str] = set()
+        # all surface forms (canonical + aliases) لأغراض الـ embeddings
         self.surface, self.to_canon = [], []
 
         for it in skills:
             can = it["canonical"].strip()
-            self.cats[can] = it.get("category", "other")
+            cat = it.get("category", "other")
+            self.cats[can] = cat
+            self.by_cat[cat].add(can)
+            self.all_canon.add(can)
+
             forms = [can] + [a.strip() for a in it.get("aliases", []) if a.strip()]
             for s in forms:
                 s_norm = _tok(s)
@@ -40,8 +49,6 @@ class SkillNormalizer:
 
     def category(self, canonical: str) -> str:
         return self.cats.get(canonical, "other")
-
-
 
     def categories(self, canon_set):
         return {self.cats.get(c, "other") for c in (canon_set or set())}
@@ -93,3 +100,30 @@ class SkillNormalizer:
                 out.update(family)
 
         return out
+
+    # ---------- جديد: اقتراح مهارات عامة من نفس فئات الـJD ----------
+    def suggest_by_categories(self, categories, exclude=None, per_cat=2, total=10):
+        """
+        اقترح مهارات من نفس الفئات (categories) الموجودة في الـontology،
+        باستثناء أي مهارات موجودة في exclude.
+        - categories: مجموعة فئات مستهدفة (مثل {"frontend","backend",...})
+        - exclude: set لمهارات canonical لاستثنائها (مثل user_can | jd_can)
+        - per_cat: حد أقصى لعدد المقترحات لكل فئة
+        - total: حد أقصى إجمالي
+        """
+        exclude = exclude or set()
+        out = []
+        # ترتيب حتمي للاستقرار
+        for cat in sorted(list(categories)):
+            count_cat = 0
+            pool = sorted(list(self.by_cat.get(cat, set())))
+            for can in pool:
+                if can in exclude:
+                    continue
+                out.append(can)
+                count_cat += 1
+                if per_cat and count_cat >= per_cat:
+                    break
+                if total and len(out) >= total:
+                    return out[:total]
+        return out[:total]
