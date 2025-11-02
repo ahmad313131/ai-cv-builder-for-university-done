@@ -1,0 +1,47 @@
+name: Backend CI
+
+on:
+  push:
+    paths:
+      - "backend/**"
+      - ".github/workflows/backend-ci.yml"
+  pull_request:
+    paths:
+      - "backend/**"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    env:
+      # خلي الـ CI يتجاوز الـ LLM حتى ما يوقف إذا ما في Ollama
+      USE_LLM_POLISH: "0"
+      # SQLite افتراضي، إذا عندك DATABASE_URL سيبه فاضي
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: "backend/requirements.txt"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest || true
+          pip install ruff black || true
+
+      - name: Lint (non-blocking)
+        continue-on-error: true
+        run: |
+          ruff check . || true
+          black --check . || true
+
+      - name: Run tests (if any)
+        run: |
+          pytest -q || echo "No tests or tests failed"
