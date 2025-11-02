@@ -1,44 +1,44 @@
 name: Frontend CI
+
 on:
   push:
+    branches: [ main ]
     paths:
-      - "**/*.js"
-      - "**/*.jsx"
       - "package.json"
       - "package-lock.json"
+      - "src/**"
+      - "public/**"
       - ".github/workflows/frontend-ci.yml"
   pull_request:
-    paths:
-      - "**/*.js"
-      - "**/*.jsx"
-      - "package.json"
-      - "package-lock.json"
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node 18
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
-          cache: npm
+          node-version: "18"
+          cache: "npm"
           cache-dependency-path: package-lock.json
+
       - name: Install deps
+        run: npm ci --no-audit --no-fund
+
+      # لو مشروعك يحتاج متغير API وقت الـbuild، عدّل السطر التالي
+      - name: Build app
         run: |
-          if [ -f package-lock.json ]; then npm ci; else npm install; fi
-      - name: Lint (optional)
-        run: npm run lint --if-present
-      - name: Test (optional)
-        run: npm test --if-present -- --watchAll=false
-      - name: Build (optional)
-        run: npm run build --if-present
-      - name: Upload build artifact
-        if: ${{ always() }}
+          REACT_APP_API_URL="http://localhost:8000" \
+          CI=false \
+          npm run build
+
+      - name: Upload build as artifact
         uses: actions/upload-artifact@v4
         with:
           name: frontend-build
-          path: |
-            build
-            dist
-          if-no-files-found: ignore
+          path: build/
