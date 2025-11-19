@@ -10,7 +10,7 @@ router = APIRouter()
 OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434")
 MODEL_NAME = os.getenv("OLLAMA_MODEL", "llama3.1:latest")
 
-normalizer = SkillNormalizer("data/skills_ontology.json", threshold=0.46)
+normalizer = SkillNormalizer("data/skills_ontology.json", threshold=0.53)
 
 class LLMAnalysisOut(BaseModel):
     matching_score: float
@@ -97,8 +97,9 @@ def llm_analyze_cv(payload: CVIn):
     J = len(jd_can)
     O = len(overlap)
 
-    coverage_user = O / max(1, U)
-    coverage_jd   = O / max(1, J)
+    k = 0.6
+    coverage_user = (O + k) / max(1, U)
+    coverage_jd   = (O + k) / max(1, J)
     coverage      = (coverage_user + coverage_jd) / 2.0
 
     cats_user = normalizer.categories(user_can)
@@ -113,7 +114,7 @@ def llm_analyze_cv(payload: CVIn):
     breadth_jd   = Co / max(1, Cj)
     breadth      = (breadth_user + breadth_jd) / 2.0
 
-    score = (0.8 * coverage + 0.2 * breadth) * 100.0
+    score = (0.85 * coverage + 0.15 * breadth) * 100.0
     score = round(min(96.0, max(0.0, score)), 2)
     level = judge_level(score)
 
@@ -236,15 +237,33 @@ POLISH_SYSTEM = (
     "You are a professional resume writer. Output VALID JSON only. "
     "Make the CV ATS-friendly and professional. "
     "Professional summary should be 3–5 sentences (~60–100 words) highlighting role, stack, scope, and quantifiable achievements. "
-    "Work experience bullets can be 1–2 sentences each (up to ~30–35 words) and must start with strong action verbs "
+
+    "Language & Mechanics: Correct spelling, grammar, punctuation, and casing throughout. "
+    "Use clear, professional English; standardize tense and voice across bullets. "
+    "Keep proper nouns EXACTLY as provided (person names, universities, companies, products, repo handles). "
+    "Do NOT change factual content or add unprovided details. "
+
+    "Work experience: You may REWRITE for clarity/impact and EXPAND sparse bullets by recombining facts already present for the SAME role. "
+    "Create 3–6 strong bullets per role when possible. "
+    "Each bullet is 1–2 sentences (~30–35 words max) and starts with a strong action verb "
     "(Developed, Built, Designed, Implemented, Optimized, Led, Architected, Automated, etc.). "
-    "Bullets should include impact, scale, metrics, or business value when possible. "
+    "Include impact/scale/metrics when present; if no numbers are provided, keep claims qualitative—do NOT fabricate figures. "
+    "Do NOT invent new employers, projects, titles, dates, or technologies. "
     "Avoid repeating phrases between profile and bullets. "
-    "Education should be clear (e.g., 'B.Sc. in Computer Science — LIU (2022–2025)'). "
-    "Group skills into up to 25 meaningful categories. "
-    "Use only info present in input (no invented facts or companies). "
+
+    "Education: DO NOT invent, alter, or infer any university, degree, field, or year. "
+    "Use exactly the values provided in input and only standardize formatting to a clear line like: "
+    "'<Degree> in <Field> — <University> (<StartYear>–<EndYear|Present>)'. "
+
+    "Skills: Group skills into up to 25 meaningful categories. "
+    "Normalize obvious synonyms/typos to canonical forms when unambiguous (e.g., 'JS' -> 'JavaScript', 'Node js' -> 'Node.js'), "
+    "but do NOT add skills that are not present in the input. "
+
+    "Use only information present in the input (no invented facts, companies, or dates). "
     "Return valid JSON only."
 )
+
+
 
 def polish_cv_struct(cv: CVIn) -> dict:
     """Call Ollama to produce a polished CV structure with dynamic skill categories."""

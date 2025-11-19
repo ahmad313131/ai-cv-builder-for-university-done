@@ -39,6 +39,7 @@ export default function ActionsBar({
         }}
       >
         <Button
+          data-testid="btn-back"
           type="button"
           variant="outlined"
           startIcon={<ArrowBackRoundedIcon />}
@@ -55,6 +56,7 @@ export default function ActionsBar({
             {/* ملاحظة: span ضرورية لأن Tooltip ما يشتغل مباشرة على عناصر disabled */}
             <span>
               <Button
+              data-testid="btn-save"
                 type="button"
                 variant="contained"
                 color="primary"
@@ -69,6 +71,7 @@ export default function ActionsBar({
           </Tooltip>
         ) : (
           <Button
+          data-testid="btn-next"
             type="button"
             variant="contained"
             color="primary"
@@ -106,6 +109,7 @@ export default function ActionsBar({
             <Tooltip title="LLM (Ollama/LLaMA) – أدق لكن أبطأ قليلاً">
               <span>
                 <Button
+                 data-testid="btn-analyze-ai"
                   type="button"
                   color="success"
                   onClick={onAnalyze}
@@ -127,6 +131,7 @@ export default function ActionsBar({
             <Tooltip title="تحليل سريع بالـembeddings">
               <span>
                 <Button
+                data-testid="btn-analyze-fast"
                   type="button"
                   color="info"
                   onClick={onAnalyzeFast}
@@ -148,6 +153,7 @@ export default function ActionsBar({
 
           {/* زر تحميل PDF */}
           <Button
+          data-testid="btn-download"
             type="button"
             variant="outlined"
             color="secondary"

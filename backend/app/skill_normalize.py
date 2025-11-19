@@ -15,7 +15,7 @@ class SkillNormalizer:
 
         with open(ontology_path, "r", encoding="utf-8") as f:
             data = json.load(f)
-
+            self.specialties = data.get("specialties", {})
         # دعم خلفي: إذا الملف القديم كان list مباشرة
         skills = data.get("skills", data if isinstance(data, list) else [])
         self.family_keywords = { (k or "").lower(): set(v) for k, v in data.get("families", {}).items() }

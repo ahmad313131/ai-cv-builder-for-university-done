@@ -16,13 +16,14 @@ from .routers.cvs import router as cvs_router
 from .pdfgeneration import router as pdf_router
 from .ai_analysis import router as ai_router
 from .ai_llm import router as llm_router
-
+from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI(title="AI CV Builder API", version="0.4")
 
 # --- CORS ---
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        "https://ai-cv-builder-analyze.netlify.app",
         "http://localhost:3000",
         "http://127.0.0.1:3000",
         # أضف هنا دومين النشر لاحقًا مثل:
@@ -31,6 +32,8 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    
+    
 )
 
 # --- Static uploads ---
