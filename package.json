@@ -46,5 +46,36 @@
   },
   "devDependencies": {
     "jest": "^27.5.1"
+  },
+  
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": ["<rootDir>/src/setupTests.js"],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "<rootDir>/src/__tests__/(home|login|mycvs|user-menu|app-.*|header-.*|personal-info-step|private-route|useCvForm)\\.test\\.js$",
+      "<rootDir>/src/__tests__/wip/"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/api.js",
+      "src/theme.js",
+      "src/hooks/useThemeMode.js",
+      "src/components/AnalysisCard.jsx",
+      "src/components/ScoreBar.jsx",
+      "src/components/ScoreCircle.jsx",
+      "src/components/ThemeToggle.jsx"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 50,
+        "branches": 50,
+        "functions": 50,
+        "lines": 50
+      }
+    }
   }
+ 
+
+
 }
