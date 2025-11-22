@@ -1,0 +1,27 @@
+name: Test & Coverage
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+      - run: npm run test -- --watchAll=false --coverage --runInBand
+
+      # Upload to Codecov (no token needed with the GitHub App)
+      - uses: codecov/codecov-action@v4
+        with:
+          files: ./coverage/lcov.info
+          flags: jest
+          verbose: true
+          # optional: make CI fail if upload fails
+          # fail_ci_if_error: true
