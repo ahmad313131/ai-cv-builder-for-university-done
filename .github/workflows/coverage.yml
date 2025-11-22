@@ -1,27 +1,35 @@
-name: Test & Coverage
+name: CI + Codecov
 on:
   push:
+    branches: [ main ]
   pull_request:
 
 jobs:
-  test:
+  test-and-upload:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write   # ✅ needed for OIDC with Codecov
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          cache: 'npm'
 
-      - run: npm ci
-      - run: npm run test -- --watchAll=false --coverage --runInBand
+      - name: Install deps
+        run: npm ci
 
-      # Upload to Codecov (no token needed with the GitHub App)
-      - uses: codecov/codecov-action@v4
+      - name: Run tests with coverage
+        run: |
+          npm run test -- --watchAll=false --coverage --runInBand
+          test -f coverage/lcov.info || (echo "lcov.info not found" && exit 1)
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
         with:
-          files: ./coverage/lcov.info
+          files: coverage/lcov.info
           flags: jest
+          use_oidc: true         # ✅ no token
           verbose: true
-          # optional: make CI fail if upload fails
-          # fail_ci_if_error: true
