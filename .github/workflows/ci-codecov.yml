@@ -1,0 +1,44 @@
+name: CI + Codecov
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  test-and-upload:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Run tests with coverage
+        run: npm run test:ci
+
+      # (Optional) sanity check that lcov exists
+      - name: Debug coverage presence
+        run: |
+          ls -la
+          ls -la coverage
+          wc -c coverage/lcov.info
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}   # required for private repos
+          files: ./coverage/lcov.info           # CRA/Jest default path
+          flags: jest
+          fail_ci_if_error: false
+          verbose: true
