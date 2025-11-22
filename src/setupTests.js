@@ -1,17 +1,17 @@
 import "@testing-library/jest-dom";
 
+// Polyfill matchMedia so MUI's useMediaQuery doesn't crash in tests
 if (!window.matchMedia) {
-  Object.defineProperty(window, "matchMedia", {
-    writable: true,
-    value: (q) => ({
+  window.matchMedia = function matchMedia(query) {
+    return {
       matches: false,
-      media: q,
+      media: query,
       onchange: null,
-      addListener: () => {},
-      removeListener: () => {},
+      addListener: () => {}, // deprecated
+      removeListener: () => {}, // deprecated
       addEventListener: () => {},
       removeEventListener: () => {},
       dispatchEvent: () => false,
-    }),
-  });
+    };
+  };
 }

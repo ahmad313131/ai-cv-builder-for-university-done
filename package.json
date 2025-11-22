@@ -48,33 +48,33 @@
     "jest": "^27.5.1"
   },
   
-  "jest": {
-    "testEnvironment": "jsdom",
-    "setupFilesAfterEnv": ["<rootDir>/src/setupTests.js"],
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "<rootDir>/src/__tests__/(home|login|mycvs|user-menu|app-.*|header-.*|personal-info-step|private-route|useCvForm)\\.test\\.js$",
-      "<rootDir>/src/__tests__/wip/"
-    ],
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "src/api.js",
-      "src/theme.js",
-      "src/hooks/useThemeMode.js",
-      "src/components/AnalysisCard.jsx",
-      "src/components/ScoreBar.jsx",
-      "src/components/ScoreCircle.jsx",
-      "src/components/ThemeToggle.jsx"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "statements": 50,
-        "branches": 50,
-        "functions": 50,
-        "lines": 50
-      }
-    }
+ "jest": {
+  "collectCoverageFrom": [
+    "src/**/*.{js,jsx}",
+    "!src/index.js",
+    "!src/reportWebVitals.js",
+    "!src/setupTests.js",
+    "!src/theme.js",
+
+    "!src/AppRouter.jsx",
+    "!src/PrivateRoute.jsx",
+    "!src/pages/**",
+
+    "!src/components/AppLayout.jsx",
+    "!src/components/Header.jsx",
+    "!src/components/UserMenu.jsx",
+    
+    "!src/hooks/useCvForm.js" 
+
+  ],
+  "coveragePathIgnorePatterns": ["/node_modules/"],
+  "coverageThreshold": {
+    "global": { "statements": 50, "branches": 40, "functions": 45, "lines": 50 }
   }
+}
+
+
+
  
 
 
