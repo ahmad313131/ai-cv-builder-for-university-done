@@ -27,55 +27,35 @@
     "test:ci": "react-scripts test --watchAll=false --coverage --runInBand"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": ["react-app", "react-app/jest"]
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+  },
+
+  "jest": {
+    "coverageReporters": ["text", "lcov", "json-summary"],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js",
+      "!src/reportWebVitals.js",
+      "!src/setupTests.js",
+      "!src/theme.js",
+
+      "!src/AppRouter.jsx",
+      "!src/PrivateRoute.jsx",
+      "!src/pages/**",
+
+      "!src/components/AppLayout.jsx",
+      "!src/components/Header.jsx",
+      "!src/components/UserMenu.jsx",
+
+      "!src/hooks/useCvForm.js"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "jest": "^27.5.1"
-  },
-  
- "jest": {
-  "collectCoverageFrom": [
-    "src/**/*.{js,jsx}",
-    "!src/index.js",
-    "!src/reportWebVitals.js",
-    "!src/setupTests.js",
-    "!src/theme.js",
-
-    "!src/AppRouter.jsx",
-    "!src/PrivateRoute.jsx",
-    "!src/pages/**",
-
-    "!src/components/AppLayout.jsx",
-    "!src/components/Header.jsx",
-    "!src/components/UserMenu.jsx",
-    
-    "!src/hooks/useCvForm.js" 
-
-  ],
-  "coveragePathIgnorePatterns": ["/node_modules/"],
-  "coverageThreshold": {
-    "global": { "statements": 50, "branches": 40, "functions": 45, "lines": 50 }
+    "coveragePathIgnorePatterns": ["/node_modules/"],
+    "coverageThreshold": {
+      "global": { "statements": 50, "branches": 40, "functions": 45, "lines": 50 }
+    }
   }
-}
-
-
-
- 
-
-
 }
