@@ -1,3 +1,7 @@
+[![CI + Codecov](https://github.com/ahmad313131/ai-cv-builder-for-university-done/actions/workflows/codecov.yml/badge.svg)](https://github.com/ahmad313131/ai-cv-builder-for-university-done/actions/workflows/codecov.yml)
+
+[![codecov](https://codecov.io/gh/ahmad313131/ai-cv-builder-for-university-done/branch/main/graph/badge.svg?token=YOUR_BADGE_TOKEN)](https://codecov.io/gh/ahmad313131/ai-cv-builder-for-university-done)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,5 +72,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-[![codecov](https://codecov.io/gh/ahmad313131/ai-cv-builder-for-university-done/branch/main/graph/badge.svg?token=YOUR_BADGE_TOKEN)](https://codecov.io/gh/ahmad313131/ai-cv-builder-for-university-done)
+
 
