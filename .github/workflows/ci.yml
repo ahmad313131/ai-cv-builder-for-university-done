@@ -1,74 +1,60 @@
-name: CI + Codecov (full-stack)
-
+name: CI + Codecov
 on:
   push:
     branches: [ main ]
   pull_request:
 
 jobs:
-  test-and-coverage:
+  test-and-upload:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      # ---------- Frontend ----------
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
 
+      # ===== Frontend =====
       - name: Install FE deps
         run: npm ci
 
-      - name: Run FE tests (coverage)
-        run: npm run test -- --watchAll=false --coverage --runInBand
-        # ينتج ./coverage/lcov.info
+      - name: Run FE tests with coverage
+        run: npm run test:ci   # يطلع ./coverage/lcov.info
 
-      # ---------- Backend (مثال Python) ----------
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: Upload FE coverage to Codecov
+        uses: codecov/codecov-action@v4
         with:
-          python-version: "3.11"
+          files: ./coverage/lcov.info
+          flags: frontend
+          disable_search: true
+          fail_ci_if_error: true
+          # لو الريبو private:
+          # token: ${{ secrets.CODECOV_TOKEN }}
+
+      # ===== Backend =====
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
       - name: Install BE deps
         working-directory: backend
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install coverage
 
-      - name: Run BE tests (coverage)
+      - name: Run BE tests with coverage
         working-directory: backend
         run: |
           coverage run -m pytest
-          coverage xml -o coverage.xml
-        # ينتج backend/coverage.xml
+          coverage xml -o coverage.xml   # ينتج backend/coverage.xml
 
-      # ---------- Debug (اختياري) ----------
-      - name: Debug coverage presence
-        run: |
-          ls -la coverage || true
-          [ -f coverage/lcov.info ] && wc -c coverage/lcov.info || true
-          [ -f backend/coverage.xml ] && wc -c backend/coverage.xml || true
-
-      # ---------- Upload to Codecov ----------
-      - name: Upload FE coverage (frontend flag)
-        uses: codecov/codecov-action@v4
-        with:
-          files: ./coverage/lcov.info
-          flags: frontend
-          fail_ci_if_error: true
-          verbose: true
-
-      - name: Upload BE coverage (backend flag)
+      - name: Upload BE coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
           files: ./backend/coverage.xml
           flags: backend
+          disable_search: true
           fail_ci_if_error: true
-          verbose: true
+          # لو الريبو private:
+          # token: ${{ secrets.CODECOV_TOKEN }}
