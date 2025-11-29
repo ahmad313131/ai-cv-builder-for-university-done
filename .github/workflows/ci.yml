@@ -39,6 +39,7 @@ jobs:
         with:
           files: ./coverage/lcov.info
           flags: jest
+          disable_search: true   # don’t auto-pick backend/other files
+          use_oidc: true         # recommended with v4
           fail_ci_if_error: true
           verbose: true
-          slug: ahmad313131/ai-cv-builder-for-university-done
