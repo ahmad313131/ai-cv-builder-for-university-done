@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      id-token: write   # ضروري لرفع Codecov بدون secret
 
     steps:
       - name: Checkout
@@ -27,7 +28,6 @@ jobs:
       - name: Run tests with coverage
         run: npm run test:ci
 
-      # (Optional) sanity check that lcov exists
       - name: Debug coverage presence
         run: |
           ls -la
@@ -37,8 +37,8 @@ jobs:
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}   # required for private repos
-          files: ./coverage/lcov.info           # CRA/Jest default path
+          files: ./coverage/lcov.info
           flags: jest
-          fail_ci_if_error: false
+          fail_ci_if_error: true
           verbose: true
+          slug: ahmad313131/ai-cv-builder-for-university-done
