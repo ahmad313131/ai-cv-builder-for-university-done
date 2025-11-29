@@ -1,6 +1,7 @@
 
-#for the codecove 
-[![codecov](https://codecov.io/gh/ahmad313131/ai-cv-builder-for-university-done/branch/main/graph/badge.svg)](https://app.codecov.io/gh/ahmad313131/ai-cv-builder-for-university-done)
+![CI + Codecov](https://github.com/ahmad313131/ai-cv-builder-for-university-done/actions/workflows/ci-codecov.yml/badge.svg)
+[![codecov](https://codecov.io/github/ahmad313131/ai-cv-builder-for-university-done/branch/main/graph/badge.svg)](https://codecov.io/github/ahmad313131/ai-cv-builder-for-university-done)
+
 
 
 # Getting Started with Create React App
