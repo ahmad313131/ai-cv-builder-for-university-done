@@ -1,21 +1,29 @@
-# codecov.yml (repo root)
 codecov:
-  max_report_age: off   # stop "Upload exceeds the max age of 12h"
-
-ignore:
-  - backend/**          # only front-end coverage for this repo
-
-# Map absolute CI paths to repo-relative paths so Codecov can match files
-# (Adjust the long path if your Actions log shows a slightly different one)
-fixes:
-  - "/home/runner/work/ai-cv-builder-for-university-done/ai-cv-builder-for-university-done/::"
+  max_report_age: off  # حتى ما يصير Expired لو تأخرت رَنّة
 
 coverage:
   status:
     project:
-      default:
+      total:          # ستاتس للإجمالي (frontend+backend)
         target: auto
         threshold: 1%
-    patch:
-      default:
+      frontend:       # ستاتس منفصل للفرونت (flag-based)
+        flags: [frontend]
         target: auto
+        threshold: 1%
+      backend:        # ستاتس منفصل للباك (flag-based)
+        flags: [backend]
+        target: auto
+        threshold: 1%
+
+# (اختياري) Components حسب المسارات لو بتحب لوحة "Components"
+component_management:
+  individual_components:
+    - component_id: frontend
+      name: Frontend
+      paths:
+        - "src/**"
+    - component_id: backend
+      name: Backend
+      paths:
+        - "backend/**"
