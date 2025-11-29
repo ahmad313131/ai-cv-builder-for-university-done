@@ -1,0 +1,21 @@
+# codecov.yml (repo root)
+codecov:
+  max_report_age: off   # stop "Upload exceeds the max age of 12h"
+
+ignore:
+  - backend/**          # only front-end coverage for this repo
+
+# Map absolute CI paths to repo-relative paths so Codecov can match files
+# (Adjust the long path if your Actions log shows a slightly different one)
+fixes:
+  - "/home/runner/work/ai-cv-builder-for-university-done/ai-cv-builder-for-university-done/::"
+
+coverage:
+  status:
+    project:
+      default:
+        target: auto
+        threshold: 1%
+    patch:
+      default:
+        target: auto
