@@ -6,5 +6,5 @@ client = TestClient(app)
 
 def test_llm_analyze_cv_validation_error():
     r = client.post("/api/llm_analyze_cv", json={"skills": "", "job_description": ""})
-    assert r.status_code == 400
+    assert r.status_code == 422
     assert "Provide skills" in r.text
