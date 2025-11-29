@@ -1,4 +1,4 @@
-name: CI + Codecov
+name: CI + Codecov (full-stack)
 
 on:
   push:
@@ -6,40 +6,69 @@ on:
   pull_request:
 
 jobs:
-  test-and-upload:
+  test-and-coverage:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      id-token: write   # ضروري لرفع Codecov بدون secret
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # ---------- Frontend ----------
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
 
-      - name: Install deps
+      - name: Install FE deps
         run: npm ci
 
-      - name: Run tests with coverage
-        run: npm run test:ci
+      - name: Run FE tests (coverage)
+        run: npm run test -- --watchAll=false --coverage --runInBand
+        # ينتج ./coverage/lcov.info
 
+      # ---------- Backend (مثال Python) ----------
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install BE deps
+        working-directory: backend
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install coverage
+
+      - name: Run BE tests (coverage)
+        working-directory: backend
+        run: |
+          coverage run -m pytest
+          coverage xml -o coverage.xml
+        # ينتج backend/coverage.xml
+
+      # ---------- Debug (اختياري) ----------
       - name: Debug coverage presence
         run: |
-          ls -la
-          ls -la coverage
-          wc -c coverage/lcov.info
+          ls -la coverage || true
+          [ -f coverage/lcov.info ] && wc -c coverage/lcov.info || true
+          [ -f backend/coverage.xml ] && wc -c backend/coverage.xml || true
 
-      - name: Upload coverage to Codecov
+      # ---------- Upload to Codecov ----------
+      - name: Upload FE coverage (frontend flag)
         uses: codecov/codecov-action@v4
         with:
           files: ./coverage/lcov.info
-          flags: jest
-          disable_search: true   # don’t auto-pick backend/other files
-          use_oidc: true         # recommended with v4
+          flags: frontend
+          fail_ci_if_error: true
+          verbose: true
+
+      - name: Upload BE coverage (backend flag)
+        uses: codecov/codecov-action@v4
+        with:
+          files: ./backend/coverage.xml
+          flags: backend
           fail_ci_if_error: true
           verbose: true
