@@ -1,78 +1,168 @@
-
 ![CI + Codecov](https://github.com/ahmad313131/ai-cv-builder-for-university-done/actions/workflows/ci-codecov.yml/badge.svg)
 [![codecov](https://codecov.io/github/ahmad313131/ai-cv-builder-for-university-done/branch/main/graph/badge.svg)](https://codecov.io/github/ahmad313131/ai-cv-builder-for-university-done)
 
+# AI CV Builder
+
+AI-powered CV builder that helps students and job seekers create a clean, professional CV and export it as a PDF using different templates.  
+The app also uses a local LLM (via **Ollama**) to analyse the CV and give feedback / polishing suggestions.
+
+Tech stack:
+
+- **Frontend:** React (Create React App, MUI)
+- **Backend:** FastAPI (Python)
+- **Database:** SQLite (local file)
+- **AI:** Local LLM via Ollama (e.g. `llama3` / `llama3.1`)
+- **Auth:** Email + Google OAuth (optional)
+- **CI:** GitHub Actions + Codecov
+
+---
+
+## 1. Requirements
+
+Make sure these are installed on the machine:
+
+- **Node.js** ≥ 18 and **npm**
+- **Python** ≥ 3.10
+- **Git**
+- **Ollama** (for the AI features)
+
+You do **not** need to install any external database server; SQLite is used by default.
+
+---
+
+## 2. Clone the repository
+
+```bash
+git clone https://github.com/ahmad313131/ai-cv-builder-for-university-done.git
 
 
-# Getting Started with Create React App
+cd ai-cv-builder-for-university-done
+ai-cv-builder-for-university-done/
+  backend/      # FastAPI app
+  src/          # React frontend (Create React App)
+  package.json
+  README.md
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+3.1 Create and activate virtual environment
+cd backend
 
-## Available Scripts
+python -m venv venv
 
-In the project directory, you can run:
+# Windows:
+venv\Scripts\activate
+# macOS / Linux:
+# source venv/bin/activate
 
-### `npm start`
+3.2 Install Python dependencies
+pip install -r requirements.txt
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3.3 Environment variables
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Create backend/.env:
 
-### `npm test`
+# FastAPI
+SECRET_KEY=change_me_to_a_random_long_string
+ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=60
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# SQLite database
+DATABASE_URL=sqlite:///./app.db
 
-### `npm run build`
+# CORS / frontend URL
+FRONTEND_ORIGIN=http://localhost:3000
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Google OAuth (optional)
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# LLM settings (Ollama)
+USE_LLM_POLISH=1
+OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_MODEL=llama3
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+uvicorn app.main:app --reload --port 8000
 
-### `npm run eject`
+4. LLM setup (Ollama)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Install Ollama from the official website.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Make sure it is running (default: http://localhost:11434).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Pull the model:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ollama pull llama3
 
-## Learn More
+The model name must match OLLAMA_MODEL in .env.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If Ollama is not available, Analyze (AI) will fail with 502 and the app will fall back to the fast, non-LLM analysis.
 
 
+5.1 Frontend environment variables
+
+Create .env in the project root:
+
+REACT_APP_API_BASE=http://localhost:8000
+
+
+
+5.2 Run the React dev server
+npm start
+
+
+Open the app in the browser:
+
+http://localhost:3000
+
+You can now:
+
+Fill personal info, education, experience, skills, etc.
+
+(Optionally) sign in with email / Google if configured.
+
+Click Analyze (AI) or Fast Analyze.
+
+Click Download PDF to generate a CV using the selected template.
+
+6. Running tests & coverage
+Frontend
+npm test
+
+Backend
+
+From backend/ with the venv activated:
+
+pytest
+# or
+pytest --cov=app
+
+
+GitHub Actions runs tests on each push and sends coverage to Codecov (see badges at the top).
+
+7. PDF templates
+
+The backend PDF system is split into:
+
+pdf_logic.py – prepares CV data and communicates with the LLM.
+
+pdf_templates.py – contains several templates (default, modern-blue, LinkedIn style).
+
+pdf_generation.py – FastAPI endpoint (/api/generate_cv) that receives the CV JSON and returns a PDF.
+
+To use another template you just change the template name in pdf_generation.py (for example "default", "modern_blue", "linkedin"). The React app already calls this endpoint.
+
+
+8. Quick summary
+
+To run the project on a new machine:
+
+Install Node, Python, Git, Ollama.
+
+git clone the repo and enter the project.
+
+Set up the backend: cd backend, create venv, pip install -r requirements.txt, create .env, run uvicorn.
+
+Pull the LLM model with ollama pull llama3.
+
+Set up the frontend: npm install, create .env, npm start.
+
+Open http://localhost:3000 and start building CVs.
