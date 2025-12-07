@@ -78,12 +78,7 @@ FRONTEND_ORIGIN=http://localhost:3000
 GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
 
-# LLM settings (Ollama)
-USE_LLM_POLISH=1
-OLLAMA_BASE_URL=http://localhost:11434
-OLLAMA_MODEL=llama3
-```
-If you don’t want to use the local LLM, set USE_LLM_POLISH=0.
+
 
 3.4 Initialise / migrate the database
 
