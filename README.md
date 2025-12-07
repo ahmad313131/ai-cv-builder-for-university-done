@@ -36,14 +36,14 @@ You do **not** need to install any external database server; SQLite is used by d
 git clone https://github.com/ahmad313131/ai-cv-builder-for-university-done.git
 
 
-cd ai-cv-builder-for-university-done
+## cd ai-cv-builder-for-university-done
 ai-cv-builder-for-university-done/
   backend/      # FastAPI app
   src/          # React frontend (Create React App)
   package.json
   README.md
 
-3.1 Create and activate virtual environment
+## 3.1 Create and activate virtual environment
 cd backend
 
 python -m venv venv
@@ -56,7 +56,7 @@ venv\Scripts\activate
 3.2 Install Python dependencies
 pip install -r requirements.txt
 
-3.3 Environment variables
+## 3.3 Environment variables
 
 Create backend/.env:
 
